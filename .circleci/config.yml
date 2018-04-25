@@ -82,7 +82,7 @@ jobs:
             command: yarn run build
         - run:
             name: Deploy
-            command: yarn run alias
+            command: ./deploy-master.sh
   alias-pr:
       working_directory: ~/henribeck.im
       docker:
@@ -97,7 +97,7 @@ jobs:
             command: yarn run build
         - run:
             name: Deploy
-            command: yarn run alias pr$CIRCLE_PR_NUMBER.henribeck
+            command: ./deploy-pr.sh
 
 
 workflows:
@@ -107,11 +107,15 @@ workflows:
     jobs:
       - deploy
       - alias-master:
+          requires:
+            - deploy
           filters:
             branches:
               only:
                 - master
       - alias-pr:
+          requires:
+            - deploy
           filters:
             branches:
               ignore:
