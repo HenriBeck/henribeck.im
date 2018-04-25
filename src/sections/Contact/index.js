@@ -6,18 +6,23 @@ import {
   EmailIcon,
   GithubCircleIcon,
   XingCircleIcon,
+  LinkedinIcon,
 } from 'mdi-react';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Container from '../../components/Container';
-import { blackTextColor } from '../../styles';
+import {
+  blackTextColor,
+  primaryBase,
+} from '../../styles';
 import Link from '../../components/Link';
 
 type Props = {
   classes: {
     container: string,
     iconContainer: string,
+    icon: string,
   },
 };
 
@@ -31,6 +36,12 @@ const styles = {
   },
 
   iconContainer: { padding: 16 },
+
+  icon: {
+    transition: 'fill 100ms linear',
+
+    '&:hover': { fill: primaryBase },
+  },
 };
 
 function Contact(props: Props) {
@@ -50,6 +61,7 @@ function Contact(props: Props) {
               <EmailIcon
                 size={64}
                 color={blackTextColor}
+                className={props.classes.icon}
               />
             </Link>
           </span>
@@ -62,6 +74,7 @@ function Contact(props: Props) {
               <GithubCircleIcon
                 size={64}
                 color={blackTextColor}
+                className={props.classes.icon}
               />
             </Link>
           </span>
@@ -74,6 +87,20 @@ function Contact(props: Props) {
               <XingCircleIcon
                 size={64}
                 color={blackTextColor}
+                className={props.classes.icon}
+              />
+            </Link>
+          </span>
+
+          <span className={props.classes.iconContainer}>
+            <Link
+              href="https://www.linkedin.com/in/henribeck/"
+              color={blackTextColor}
+            >
+              <LinkedinIcon
+                size={64}
+                color={blackTextColor}
+                className={props.classes.icon}
               />
             </Link>
           </span>
