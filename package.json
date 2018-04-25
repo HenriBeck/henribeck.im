@@ -8,8 +8,8 @@
     "build": "next build",
     "lint": "eslint src/ pages/",
     "flow": "flow check",
-    "deploy": "now -e NODE_ENV=production --token NOW_TOKEN",
-    "alias": "now alias --token=NOW_TOKEN"
+    "deploy": "now -e NODE_ENV=production --token=$NOW_TOKEN",
+    "alias": "now alias --token=$NOW_TOKEN"
   },
   "dependencies": {
     "@zeit/next-css": "0.1.5",
