@@ -10,6 +10,14 @@ import {
   whiteTextColor,
 } from '../../styles';
 
+type Props = {
+  classes: {
+    section: string,
+    title: string,
+    caption: string,
+  },
+};
+
 const styles = {
   section: {
     marginTop: 0,
@@ -33,7 +41,7 @@ const styles = {
 };
 const name = 'hero';
 
-function Hero(props) {
+function Hero(props: Props) {
   return (
     <Section
       className={props.classes.section}
@@ -41,7 +49,7 @@ function Hero(props) {
     >
       <Container>
         <span className={props.classes.title}>
-          I'm Henri
+          I&apos;m Henri
         </span>
         <span className={props.classes.caption}>
           A 19 year old JS Developer from Hamburg

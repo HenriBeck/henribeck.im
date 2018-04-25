@@ -14,6 +14,13 @@ import Container from '../../components/Container';
 import { blackTextColor } from '../../styles';
 import Link from '../../components/Link';
 
+type Props = {
+  classes: {
+    container: string,
+    iconContainer: string,
+  },
+};
+
 const name = 'contact';
 const styles = {
   container: {
@@ -26,7 +33,7 @@ const styles = {
   iconContainer: { padding: 16 },
 };
 
-function Contact(props) {
+function Contact(props: Props) {
   return (
     <Section name="contact">
       <Container>

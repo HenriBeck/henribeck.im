@@ -6,6 +6,13 @@ import injectSheet from 'react-jss';
 import Link from '../../components/Link';
 import { primaryBase } from '../../styles';
 
+type Props = {
+  classes: {
+    grid: string,
+    column: string,
+  },
+};
+
 const styles = {
   grid: {
     display: 'grid',
@@ -21,7 +28,7 @@ const styles = {
   },
 };
 
-function Text(props) {
+function Text(props: Props) {
   return (
     <div className={props.classes.grid}>
       <div className={props.classes.column}>

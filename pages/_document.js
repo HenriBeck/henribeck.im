@@ -46,6 +46,7 @@ export default class MyDocument extends Document {
             key="css"
           />
 
+          {/* eslint-disable-next-line react/no-danger */ }
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
 

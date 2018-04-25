@@ -6,7 +6,8 @@
 [libs]
 
 [lints]
-all=warn
+all=error
+untyped-import=warn
 
 [options]
 emoji=true

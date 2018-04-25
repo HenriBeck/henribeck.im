@@ -10,12 +10,7 @@ import { blackTextColor } from '../../styles';
 
 import Project from './Project';
 
-type Props = {
-  classes: {
-    grid: string,
-    column: string,
-  },
-};
+type Props = { classes: { grid: string } };
 
 const name = 'projects';
 
@@ -33,7 +28,7 @@ const styles = {
   },
 };
 
-function Projects({ classes }: Props) {
+function Projects(props: Props) {
   return (
     <Section name="projects">
       <Container>
@@ -41,7 +36,7 @@ function Projects({ classes }: Props) {
           Projects
         </Header>
 
-        <div className={classes.grid}>
+        <div className={props.classes.grid}>
           <Project
             title="materialize-react"
             link="https://github.com/HenriBeck/materialize-react"

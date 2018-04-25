@@ -66,7 +66,10 @@ class NavBar extends React.Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props, prevState: State) {
-    if (prevState.selectedSection !== this.state.selectedSection && this.state.selectedSection) {
+    if (
+      prevState.selectedSection !== this.state.selectedSection
+      && this.state.selectedSection !== null
+    ) {
       window.location.hash = `#${this.state.selectedSection}`;
     }
   }
@@ -116,10 +119,6 @@ class NavBar extends React.Component<Props, State> {
 
     const sectionName = activeSection.section.getAttribute('data-name');
 
-    if (!sectionName) {
-      return;
-    }
-
     this.setState((state) => {
       if (state.selectedSection === sectionName) {
         return null;
@@ -132,7 +131,7 @@ class NavBar extends React.Component<Props, State> {
         };
       }
 
-      const navItem = this.items.get(sectionName);
+      const navItem = typeof sectionName === 'string' ? this.items.get(sectionName) : null;
       const right = navItem ? navItem.getBoundingClientRect().right : 0;
 
       return {

@@ -3,7 +3,10 @@
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
 
-import { blackTextColor, primaryBase } from '../../styles';
+import {
+  blackTextColor,
+  primaryBase,
+} from '../../styles';
 
 type Props = {
   title: Node,
@@ -42,23 +45,18 @@ const styles = {
   },
 };
 
-function Project({
-  classes,
-  title,
-  children,
-  link,
-}: Props) {
+function Project(props: Props) {
   return (
-    <div className={classes.container}>
+    <div className={props.classes.container}>
       <a
-        className={classes.title}
-        href={link}
+        className={props.classes.title}
+        href={props.link}
       >
-        {title}
+        {props.title}
       </a>
 
-      <span className={classes.description}>
-        {children}
+      <span className={props.classes.description}>
+        {props.children}
       </span>
     </div>
   );

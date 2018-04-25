@@ -2,7 +2,7 @@
 
 import 'normalize.css';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Hero from './sections/Hero';
 import Bio from './sections/Bio';
@@ -20,7 +20,7 @@ const sections = [
 
 export default function App() {
   return (
-    <React.Fragment>
+    <Fragment>
       <NavBar sections={sections} />
 
       {sections.map(({
@@ -31,6 +31,6 @@ export default function App() {
       ))}
 
       <Footer />
-    </React.Fragment>
+    </Fragment>
   );
 }
