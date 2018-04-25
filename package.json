@@ -1,0 +1,29 @@
+{
+  "name": "henribeck.im",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@zeit/next-css": "0.1.5",
+    "file-loader": "1.1.11",
+    "jss": "9.8.1",
+    "mdi-react": "3.3.0",
+    "next": "5.1.0",
+    "normalize.css": "8.0.0",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "react-event-listener": "0.5.3",
+    "react-jss": "8.4.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "lint": "eslint src/",
+    "flow": "flow check src/"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-henribeck": "4.19.3",
+    "flow-bin": "0.70.0"
+  }
+}
