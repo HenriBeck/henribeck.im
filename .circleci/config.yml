@@ -61,7 +61,7 @@ jobs:
         - run:
             name: Install Packages
             command: yarn install
-        -run:
+        - run:
             name: Install Now CLI
             command: npm install -g now
         - run:
