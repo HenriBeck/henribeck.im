@@ -62,9 +62,6 @@ jobs:
             name: Install Packages
             command: yarn install
         - run:
-            name: Build package
-            command: yarn run build
-        - run:
             name: Deploy
             command: ./deploy-master.sh
   deploy-pr:
@@ -77,12 +74,8 @@ jobs:
             name: Install Packages
             command: yarn install
         - run:
-            name: Build package
-            command: yarn run build
-        - run:
             name: Deploy
             command: ./deploy-pr.sh
-
 
 workflows:
   version: 2
