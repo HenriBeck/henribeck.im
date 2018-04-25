@@ -48,28 +48,28 @@ function Projects(props: Props) {
             title="Jss"
             link="https://github.com/cssinjs"
           >
-            JSS is an authoring tool for CSS which uses JavaScript as a host language.
+            JSS is an authoring tool for CSS which uses JavaScript as a host language
           </Project>
 
           <Project
             title="react-smart-parallax"
             link="https://github.com/HenriBeck/react-smart-parallax"
           >
-            A React component which renders a smart parallax
+            A React Component which renders a smart Parallax
           </Project>
 
           <Project
             title="react-context-subscriber"
             link="https://github.com/HenriBeck/react-context-subscriber"
           >
-            A Higher-order-Component for the new React Context
+            A Higher-Order-Component for the new React Context
           </Project>
 
           <Project
             title="TF2Pickup (RIP)"
             link="https://github.com/TF2PickupNET"
           >
-            A website for a pickup system for Team Fortress 2
+            A website for a Pickup-System for Team Fortress 2
           </Project>
         </div>
       </Container>
