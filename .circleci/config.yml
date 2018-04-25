@@ -62,14 +62,11 @@ jobs:
             name: Install Packages
             command: yarn install
         - run:
-            name: Install Now CLI
-            command: npm install -g now
-        - run:
             name: Build package
             command: yarn run build
         - run:
             name: Deploy
-            command: now
+            command: ./node_modules/.bin/now
 
   alias:
       working_directory: ~/henribeck.im
@@ -85,7 +82,7 @@ jobs:
             command: yarn run build
         - run:
             name: Deploy
-            command: now alias
+            command: ./node_modules/.bin/now alias
 
 
 workflows:
