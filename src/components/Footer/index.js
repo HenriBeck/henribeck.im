@@ -46,10 +46,10 @@ function Footer(props: Props) {
             ReactJS
           </Link>,
           <Link
-            href="https://glamorous.rocks"
+            href="https://github.com/cssinjs/react-jss"
             color={whiteTextColor}
           >
-            glamorous
+            react-jss
           </Link>
           and
           <Link
