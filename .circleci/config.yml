@@ -52,10 +52,52 @@ jobs:
             name: Build package
             command: yarn run build
 
+  deploy:
+      working_directory: ~/henribeck.im
+      docker:
+        - image: circleci/node:8
+      steps:
+        - checkout
+        - run:
+            name: Install Packages
+            command: yarn install
+        - run:
+            name: Build package
+            command: yarn run build
+        - run:
+            name: Deploy
+            command: now
+
+  alias:
+      working_directory: ~/henribeck.im
+      docker:
+        - image: circleci/node:8
+      steps:
+        - checkout
+        - run:
+            name: Install Packages
+            command: yarn install
+        - run:
+            name: Build package
+            command: yarn run build
+        - run:
+            name: Deploy
+            command: now alias
+
+
 workflows:
   version: 2
 
-  build:
+  deploy:
+    jobs:
+      - deploy
+      - alias:
+          filters:
+            branches:
+              only:
+                - master
+
+  test:
     jobs:
       - lint
       - flow
