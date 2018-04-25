@@ -28,6 +28,6 @@
     "eslint": "4.19.1",
     "eslint-config-henribeck": "4.19.3",
     "flow-bin": "0.70.0",
-    "now": "^11.1.7"
+    "now": "11.1.7"
   }
 }

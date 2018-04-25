@@ -68,7 +68,7 @@ jobs:
             name: Deploy
             command: yarn run deploy
 
-  alias:
+  alias-master:
       working_directory: ~/henribeck.im
       docker:
         - image: circleci/node:8
@@ -82,7 +82,22 @@ jobs:
             command: yarn run build
         - run:
             name: Deploy
-            command: ./node_modules/.bin/now alias
+            command: yarn run alias
+  alias-pr:
+      working_directory: ~/henribeck.im
+      docker:
+        - image: circleci/node:8
+      steps:
+        - checkout
+        - run:
+            name: Install Packages
+            command: yarn install
+        - run:
+            name: Build package
+            command: yarn run build
+        - run:
+            name: Deploy
+            command: yarn run alias pr$CIRCLE_PR_NUMBER.henribeck
 
 
 workflows:
@@ -91,10 +106,15 @@ workflows:
   deploy:
     jobs:
       - deploy
-      - alias:
+      - alias-master:
           filters:
             branches:
               only:
+                - master
+      - alias-pr:
+          filters:
+            branches:
+              ignore:
                 - master
 
   test:
