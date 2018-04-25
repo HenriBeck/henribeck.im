@@ -64,18 +64,6 @@ jobs:
         - run:
             name: Deploy
             command: ./deploy-master.sh
-  deploy-pr:
-      working_directory: ~/henribeck.im
-      docker:
-        - image: circleci/node:8
-      steps:
-        - checkout
-        - run:
-            name: Install Packages
-            command: yarn install
-        - run:
-            name: Deploy
-            command: ./deploy-pr.sh
 
 workflows:
   version: 2
@@ -86,11 +74,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
-      - deploy-pr:
-          filters:
-            branches:
-              ignore:
                 - master
 
   test:
