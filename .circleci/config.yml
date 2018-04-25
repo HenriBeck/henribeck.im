@@ -66,7 +66,7 @@ jobs:
             command: yarn run build
         - run:
             name: Deploy
-            command: ./node_modules/.bin/now
+            command: yarn run deploy
 
   alias:
       working_directory: ~/henribeck.im
