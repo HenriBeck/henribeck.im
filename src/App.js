@@ -3,6 +3,7 @@
 import 'normalize.css';
 
 import React, { Fragment } from 'react';
+import ReactGA from 'react-ga';
 
 import Hero from './sections/Hero';
 import Bio from './sections/Bio';
@@ -18,19 +19,25 @@ const sections = [
   Contact,
 ];
 
-export default function App() {
-  return (
-    <Fragment>
-      <NavBar sections={sections} />
+export default class App extends React.Component<{}> {
+  componentDidMount() {
+    ReactGA.initialize('UA-118280928-1');
+  }
 
-      {sections.map(({
-        Component,
-        name,
-      }) => (
-        <Component key={name} />
-      ))}
+  render() {
+    return (
+      <Fragment>
+        <NavBar sections={sections} />
 
-      <Footer />
-    </Fragment>
-  );
+        {sections.map(({
+          Component,
+          name,
+        }) => (
+          <Component key={name} />
+        ))}
+
+        <Footer />
+      </Fragment>
+    );
+  }
 }
