@@ -22,6 +22,8 @@ const sections = [
 export default class App extends React.Component<{}> {
   componentDidMount() {
     ReactGA.initialize('UA-118280928-1');
+
+    ReactGA.pageview('/');
   }
 
   render() {
