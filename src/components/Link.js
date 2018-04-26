@@ -5,7 +5,6 @@ import injectSheet from 'react-jss';
 
 type Props = {
   href: string,
-  color: string,
   children: Node,
   className?: string,
   classes: { link: string },
@@ -24,7 +23,6 @@ function Link(props: Props) {
     <a
       className={`${props.classes.link} ${props.className || ''}`}
       rel="noopener noreferrer"
-      color={props.color}
       href={props.href}
     >
       {props.children}
