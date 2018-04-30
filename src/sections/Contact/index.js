@@ -16,7 +16,7 @@ import {
   blackTextColor,
   primaryBase,
 } from '../../styles';
-import Link from '../../components/Link';
+import createLink from '../../components/create-link';
 
 type Props = {
   classes: {
@@ -26,6 +26,7 @@ type Props = {
   },
 };
 
+const Link = createLink(blackTextColor);
 const name = 'contact';
 const styles = {
   container: {
@@ -54,10 +55,7 @@ function Contact(props: Props) {
 
         <div className={props.classes.container}>
           <span className={props.classes.iconContainer}>
-            <Link
-              href="mailto:henribeck.dev@gmail.com"
-              color={blackTextColor}
-            >
+            <Link href="mailto:henribeck.dev@gmail.com">
               <EmailIcon
                 size={64}
                 color={blackTextColor}
@@ -67,10 +65,7 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link
-              href="https://github.com/HenriBeck"
-              color={blackTextColor}
-            >
+            <Link href="https://github.com/HenriBeck">
               <GithubCircleIcon
                 size={64}
                 color={blackTextColor}
@@ -80,10 +75,7 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link
-              href="https://www.xing.com/profile/Henri_Beck2/cv"
-              color={blackTextColor}
-            >
+            <Link href="https://www.xing.com/profile/Henri_Beck2/cv">
               <XingCircleIcon
                 size={64}
                 color={blackTextColor}
@@ -93,10 +85,7 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link
-              href="https://www.linkedin.com/in/henribeck/"
-              color={blackTextColor}
-            >
+            <Link href="https://www.linkedin.com/in/henribeck/">
               <LinkedinIcon
                 size={64}
                 color={blackTextColor}

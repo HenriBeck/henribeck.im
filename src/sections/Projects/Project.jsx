@@ -7,6 +7,7 @@ import {
   blackTextColor,
   primaryBase,
 } from '../../styles';
+import createLink from '../../components/create-link';
 
 type Props = {
   title: Node,
@@ -19,6 +20,7 @@ type Props = {
   },
 };
 
+const Link = createLink(blackTextColor);
 const styles = {
   container: {
     display: 'flex',
@@ -32,7 +34,6 @@ const styles = {
     fontSize: '1.5em',
     lineHeight: 1.25,
     textDecoration: 'none',
-    color: blackTextColor,
     marginBottom: '10px',
 
     '&:hover': { color: primaryBase },
@@ -48,12 +49,12 @@ const styles = {
 function Project(props: Props) {
   return (
     <div className={props.classes.container}>
-      <a
+      <Link
         className={props.classes.title}
         href={props.link}
       >
         {props.title}
-      </a>
+      </Link>
 
       <span className={props.classes.description}>
         {props.children}

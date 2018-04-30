@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 
 import Section from '../Section';
 import Container from '../Container';
-import Link from '../Link';
+import createLink from '../create-link';
 import { whiteTextColor } from '../../styles';
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
   },
 };
 
+const Link = createLink(whiteTextColor);
 const styles = {
   section: {
     backgroundColor: '#282B2E',
@@ -38,26 +39,7 @@ function Footer(props: Props) {
     <Section className={props.classes.section}>
       <Container className={props.classes.container}>
         <span>
-          Made with
-          <Link
-            href="https://reactjs.org/"
-            color={whiteTextColor}
-          >
-            ReactJS
-          </Link>,
-          <Link
-            href="https://github.com/cssinjs/react-jss"
-            color={whiteTextColor}
-          >
-            react-jss
-          </Link>
-          and
-          <Link
-            href="https://github.com/zeit/next.js/"
-            color={whiteTextColor}
-          >
-            NextJS
-          </Link>
+          Made with <Link href="https://reactjs.org/">ReactJS</Link>, <Link href="https://github.com/cssinjs/react-jss">react-jss</Link> and <Link href="https://github.com/zeit/next.js/">NextJS</Link>
         </span>
 
         <span>

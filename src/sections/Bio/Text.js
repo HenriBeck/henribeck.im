@@ -3,7 +3,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import Link from '../../components/Link';
+import createLink from '../../components/create-link';
 import { primaryBase } from '../../styles';
 
 type Props = {
@@ -13,6 +13,7 @@ type Props = {
   },
 };
 
+const Link = createLink(primaryBase);
 const styles = {
   grid: {
     display: 'grid',
@@ -51,21 +52,10 @@ function Text(props: Props) {
         <br />
         <br />
         In the summer of 2017, I finally graduated from school.
-        I started studying IT in the October of 2017 at
-        <Link
-          href="https://fh-wedel.de/"
-          color={primaryBase}
-        >
-          FH Wedel
-        </Link>.<br />
+        I started studying IT in the October of 2017 at<br />
+        <Link href="https://fh-wedel.de/">FH Wedel</Link>.<br />
         In March 2018 I was a Coach at the<br />
-        <Link
-          href="https://code.design"
-          color={primaryBase}
-        >
-          Code + Design
-        </Link>
-        Camp in Hamburg.
+        <Link href="https://code.design">Code + Design</Link> Camp in Hamburg.
       </div>
     </div>
   );
