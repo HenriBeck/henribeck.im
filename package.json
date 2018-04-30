@@ -15,7 +15,7 @@
     "file-loader": "1.1.11",
     "jss": "9.8.1",
     "mdi-react": "3.3.0",
-    "next": "5.1.0",
+    "next": "6.0.0",
     "normalize.css": "8.0.0",
     "prop-types": "15.6.1",
     "react": "16.3.2",
@@ -25,6 +25,7 @@
     "react-jss": "8.4.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.46",
     "eslint": "4.19.1",
     "eslint-config-henribeck": "4.19.3",
     "flow-bin": "0.71.0",
