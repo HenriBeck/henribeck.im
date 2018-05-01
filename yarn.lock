@@ -3193,7 +3193,7 @@ is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
 
-is-extendable@^1.0.1:
+is-extendable@^1.0.0, is-extendable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-1.0.1.tgz#a7470f9e426733d81bd81e1155264e3a3507cab4"
   dependencies:
@@ -3639,6 +3639,10 @@ lodash.kebabcase@4.1.1, lodash.kebabcase@^4.0.1:
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
+
+lodash.omit@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
 
 lodash.snakecase@4.1.1, lodash.snakecase@^4.0.1:
   version "4.1.1"
@@ -4155,6 +4159,12 @@ object.assign@^4.0.4:
     function-bind "^1.1.1"
     has-symbols "^1.0.0"
     object-keys "^1.0.11"
+
+object.omit@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-3.0.0.tgz#0e3edc2fce2ba54df5577ff529f6d97bd8a522af"
+  dependencies:
+    is-extendable "^1.0.0"
 
 object.omit@^2.0.0:
   version "2.0.1"

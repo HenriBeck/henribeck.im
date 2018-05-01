@@ -1,7 +1,8 @@
-// @flow
+// @flow strict
 
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
+import omit from 'object.omit';
 
 type Props = {
   href: string,
@@ -11,21 +12,15 @@ type Props = {
 };
 
 export default function createLink(color: string) {
-  function Link({
-    href,
-    classes,
-    className,
-    children,
-    ...props
-  }: Props) {
+  function Link(props: Props) {
     return (
       <a
-        className={`${classes.link} ${className || ''}`}
+        className={`${props.classes.link} ${props.className || ''}`}
         rel="noopener noreferrer"
-        href={href}
-        {...props}
+        href={props.href}
+        {...omit(props, ['href', 'children', 'classes', 'className'])}
       >
-        {children}
+        {props.children}
       </a>
     );
   }
