@@ -1,13 +1,10 @@
 // @flow
 
 import React from 'react';
+import injectSheet from 'react-jss';
+import normalize from 'jss-normalize';
 
 import App from '../src/App';
 
-import './style.css';
+export default injectSheet(normalize)(() => <App />);
 
-export default function index() {
-  return (
-    <App />
-  );
-}

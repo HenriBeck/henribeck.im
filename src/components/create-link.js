@@ -11,14 +11,21 @@ type Props = {
 };
 
 export default function createLink(color: string) {
-  function Link(props: Props) {
+  function Link({
+    href,
+    classes,
+    className,
+    children,
+    ...props
+  }: Props) {
     return (
       <a
-        className={`${props.classes.link} ${props.className || ''}`}
+        className={`${classes.link} ${className || ''}`}
         rel="noopener noreferrer"
-        href={props.href}
+        href={href}
+        {...props}
       >
-        {props.children}
+        {children}
       </a>
     );
   }

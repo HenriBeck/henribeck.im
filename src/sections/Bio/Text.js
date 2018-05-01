@@ -4,7 +4,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import createLink from '../../components/create-link';
-import { primaryBase } from '../../styles';
+import { primaryBase, primaryDark } from '../../styles';
 
 type Props = {
   classes: {
@@ -13,7 +13,7 @@ type Props = {
   },
 };
 
-const Link = createLink(primaryBase);
+const Link = createLink(primaryDark);
 const styles = {
   grid: {
     display: 'grid',
