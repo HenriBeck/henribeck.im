@@ -1,8 +1,9 @@
-// @flow
+// @flow strict
 
 import 'normalize.css';
 
 import React, { Fragment } from 'react';
+import injectSheet from 'react-jss';
 import ReactGA from 'react-ga';
 
 import Hero from './sections/Hero';
@@ -18,8 +19,27 @@ const sections = [
   Projects,
   Contact,
 ];
+const styles = {
+  '@global': {
+    '*': {
+      padding: 0,
+      margin: 0,
+      boxSizing: 'border-box',
+    },
 
-export default class App extends React.Component<{}> {
+    'body, #root': {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      fontFamily: '"Roboto", sans-serif',
+      width: '100vw',
+      minHeight: '100vh',
+      fontSize: '16px',
+    },
+  },
+};
+
+class App extends React.Component<{}> {
   componentDidMount() {
     ReactGA.initialize('UA-118280928-1');
 
@@ -31,15 +51,16 @@ export default class App extends React.Component<{}> {
       <Fragment>
         <NavBar sections={sections} />
 
-        {sections.map(({
-          Component,
-          name,
-        }) => (
-          <Component key={name} />
-        ))}
+        <main>
+          {sections.map(section => (
+            <section.Component key={section.name} />
+          ))}
+        </main>
 
         <Footer />
       </Fragment>
     );
   }
 }
+
+export default injectSheet(styles)(App);

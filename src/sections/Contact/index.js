@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 import React from 'react';
 import injectSheet from 'react-jss';
@@ -55,7 +55,10 @@ function Contact(props: Props) {
 
         <div className={props.classes.container}>
           <span className={props.classes.iconContainer}>
-            <Link href="mailto:henribeck.dev@gmail.com">
+            <Link
+              href="mailto:henribeck.dev@gmail.com"
+              aria-label="E-Mail"
+            >
               <EmailIcon
                 size={64}
                 color={blackTextColor}
@@ -65,7 +68,10 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link href="https://github.com/HenriBeck">
+            <Link
+              href="https://github.com/HenriBeck"
+              aria-label="GitHub Profile"
+            >
               <GithubCircleIcon
                 size={64}
                 color={blackTextColor}
@@ -75,7 +81,10 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link href="https://www.xing.com/profile/Henri_Beck2/cv">
+            <Link
+              href="https://www.xing.com/profile/Henri_Beck2/cv"
+              aria-label="Xing Profile"
+            >
               <XingCircleIcon
                 size={64}
                 color={blackTextColor}
@@ -85,7 +94,10 @@ function Contact(props: Props) {
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link href="https://www.linkedin.com/in/henribeck/">
+            <Link
+              href="https://www.linkedin.com/in/henribeck/"
+              aria-label="LinkedIn Profile"
+            >
               <LinkedinIcon
                 size={64}
                 color={blackTextColor}

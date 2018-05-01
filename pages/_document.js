@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <link
             href="https://fonts.googleapis.com/css?family=Roboto"
@@ -41,9 +41,23 @@ export default class MyDocument extends Document {
           <title key="title">Henri Beck | Personal Website</title>
 
           <link
-            rel="stylesheet"
-            href="/_next/static/style.css"
-            key="css"
+            rel="manifest"
+            href="/static/manifest.json"
+          />
+
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+          />
+
+          <meta
+            name="Description"
+            content="Personal Website of Henri Beck"
+          />
+
+          <meta
+            name="theme-color"
+            content="#2196F3"
           />
 
           {/* eslint-disable-next-line react/no-danger */ }

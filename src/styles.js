@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 export const blackTextColor = '#424242';
 export const whiteTextColor = '#ffffff';
