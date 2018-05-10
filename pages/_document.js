@@ -14,9 +14,9 @@ import {
 type Options = { renderPage: <T>(T) => { html: string, errorHtml: string } };
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }: Options) {
+  static getInitialProps(options: Options) {
     const registry = new SheetsRegistry();
-    const page = renderPage(Component => () => (
+    const page = options.renderPage(Component => () => (
       <JssProvider registry={registry}>
         <Component />
       </JssProvider>
