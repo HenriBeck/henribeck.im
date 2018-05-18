@@ -22,6 +22,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 2,
+
+    '@media screen and (max-width: 700px)': { display: props => !props.isSelected && 'none' },
   },
 
   text: {

@@ -15,7 +15,9 @@ const styles = {
     backgroundColor: primaryDark,
     transition: 'transform 260ms linear',
     transformOrigin: 'left center',
-    transform: props => `scaleX(${props.scale})`,
+
+    '@media screen and (max-width: 700px)': { transform: 'scale(0)' },
+    '@media screen and (min-width: 701px)': { transform: props => `scaleX(${props.scale})` },
   },
 };
 

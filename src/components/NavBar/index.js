@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import EventListener from 'react-event-listener';
 
 import {
-  primaryBase,
+  primaryBase, primaryDark,
   whiteTextColor,
 } from '../../styles';
 import Container from '../Container';
@@ -41,6 +41,8 @@ const styles = {
     right: 0,
     color: whiteTextColor,
     zIndex: 1,
+
+    '@media screen and (max-width: 700px)': { backgroundColor: primaryDark },
   },
 
   container: { flexDirection: 'row' },
@@ -151,7 +153,7 @@ class NavBar extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className={this.props.classes.navbar}>
+      <nav className={this.props.classes.navbar}>
         <EventListener
           target="document"
           onScroll={this.handleScroll}
@@ -171,7 +173,7 @@ class NavBar extends React.Component<Props, State> {
             </Item>
           ))}
         </Container>
-      </div>
+      </nav>
     );
   }
 }
