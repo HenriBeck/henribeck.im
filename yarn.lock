@@ -613,6 +613,13 @@
     core-js "^2.5.3"
     regenerator-runtime "^0.11.1"
 
+"@babel/runtime@^7.0.0-beta.42":
+  version "7.0.0-beta.47"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-beta.47.tgz#273f5e71629e80f6cbcd7507503848615e59f7e0"
+  dependencies:
+    core-js "^2.5.3"
+    regenerator-runtime "^0.11.1"
+
 "@babel/template@7.0.0-beta.42":
   version "7.0.0-beta.42"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.42.tgz#7186d4e70d44cdec975049ba0a73bdaf5cdee052"
@@ -4863,10 +4870,11 @@ react-dom@16.3.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-event-listener@0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.5.5.tgz#333635b1a464a418eaf91ff96c9f8726b1d908c3"
+react-event-listener@0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.5.8.tgz#b9a74d50740e7ce7915ba6c1ec8983c56a126ca4"
   dependencies:
+    "@babel/runtime" "^7.0.0-beta.42"
     fbjs "^0.8.16"
     prop-types "^15.6.0"
     warning "^3.0.0"
