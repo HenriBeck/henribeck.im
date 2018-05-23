@@ -23,7 +23,7 @@
     "prop-types": "15.6.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
-    "react-event-listener": "0.5.5",
+    "react-event-listener": "0.5.8",
     "react-ga": "2.5.2",
     "react-jss": "8.4.0"
   },
