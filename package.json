@@ -16,7 +16,7 @@
     "file-loader": "1.1.11",
     "jss": "9.8.1",
     "jss-normalize": "2.0.0",
-    "mdi-react": "3.3.0",
+    "mdi-react": "3.4.0",
     "next": "6.0.3",
     "normalize.css": "8.0.0",
     "object.omit": "3.0.0",
