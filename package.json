@@ -31,6 +31,6 @@
     "eslint": "4.19.1",
     "eslint-config-henribeck": "4.19.6",
     "flow-bin": "0.72.0",
-    "now": "11.1.12"
+    "now": "11.1.13"
   }
 }
