@@ -8,12 +8,11 @@ import {
 } from 'materialize-react';
 
 import Link from '../Link';
-import Section from '../Section';
 import Container from '../Container';
 
 type Props = {
   classes: {
-    section: string,
+    footer: string,
     container: string,
     imprint: string,
     bottomContainer: string,
@@ -26,9 +25,10 @@ const theme = createTheme({
   accent: 'yellow',
 });
 const styles = {
-  section: {
+  footer: {
+    display: 'flex',
+    justifyContent: 'center',
     backgroundColor: '#282B2E',
-    margin: 0,
     padding: '16px 0',
   },
 
@@ -52,7 +52,7 @@ const styles = {
 
 function Footer(props: Props) {
   return (
-    <Section className={props.classes.section}>
+    <footer className={props.classes.footer}>
       <Container className={props.classes.container}>
         <div className={props.classes.imprint}>
           <Typography typography="body1">
@@ -106,7 +106,7 @@ function Footer(props: Props) {
           </Typography>
         </div>
       </Container>
-    </Section>
+    </footer>
   );
 }
 
