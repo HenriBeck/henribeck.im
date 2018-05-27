@@ -4106,9 +4106,9 @@ normalize.css@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
 
-now@11.1.13:
-  version "11.1.13"
-  resolved "https://registry.yarnpkg.com/now/-/now-11.1.13.tgz#a6fff53423f89ed321c091172012f986eb05a72f"
+now@11.1.14:
+  version "11.1.14"
+  resolved "https://registry.yarnpkg.com/now/-/now-11.1.14.tgz#4447478bcfbd146c30a77589f83812738d7006b1"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
