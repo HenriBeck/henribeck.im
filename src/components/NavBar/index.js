@@ -1,13 +1,10 @@
-// @flow strict
+// @flow strict-local
 
 import React from 'react';
 import injectSheet from 'react-jss';
 import EventListener from 'react-event-listener';
+import { type ThemeType } from 'materialize-react';
 
-import {
-  primaryBase, primaryDark,
-  whiteTextColor,
-} from '../../styles';
 import Container from '../Container';
 
 import Item from './Item';
@@ -29,23 +26,25 @@ type State = {
   selectedSection: string | null,
 };
 
-const styles = {
-  navbar: {
-    backgroundColor: primaryBase,
-    height: 64,
-    display: 'flex',
-    justifyContent: 'center',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    color: whiteTextColor,
-    zIndex: 1,
+const styles = (theme: ThemeType) => {
+  return {
+    navbar: {
+      backgroundColor: theme.primary.base,
+      height: 64,
+      display: 'flex',
+      justifyContent: 'center',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1,
+      color: '#ffffff',
 
-    '@media screen and (max-width: 700px)': { backgroundColor: primaryDark },
-  },
+      '@media screen and (max-width: 700px)': { backgroundColor: theme.primary.dark },
+    },
 
-  container: { flexDirection: 'row' },
+    container: { flexDirection: 'row' },
+  };
 };
 
 class NavBar extends React.Component<Props, State> {

@@ -7,7 +7,7 @@
     "start": "next start",
     "build": "next build",
     "lint": "eslint src/ pages/",
-    "flow": "flow check",
+    "flow": "flow-check",
     "now": "now --token=$NOW_TOKEN"
   },
   "dependencies": {
@@ -16,7 +16,8 @@
     "file-loader": "1.1.11",
     "jss": "9.8.1",
     "jss-normalize": "2.0.0",
-    "mdi-react": "3.4.0",
+    "materialize-react": "0.3.4",
+    "mdi": "2.2.43",
     "next": "6.0.3",
     "normalize.css": "8.0.0",
     "object.omit": "3.0.0",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "eslint": "4.19.1",
+    "flow-checker": "0.3.0",
     "eslint-config-henribeck": "4.19.6",
     "flow-bin": "0.73.0",
     "now": "11.1.14"

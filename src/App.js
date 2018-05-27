@@ -1,10 +1,15 @@
-// @flow strict
+// @flow strict-local-local
 
 import 'normalize.css';
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import injectSheet from 'react-jss';
 import ReactGA from 'react-ga';
+import {
+  Theme,
+  createTheme,
+  Background,
+} from 'materialize-react';
 
 import Hero from './sections/Hero';
 import Bio from './sections/Bio';
@@ -31,13 +36,16 @@ const styles = {
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
-      fontFamily: '"Roboto", sans-serif',
       width: '100vw',
       minHeight: '100vh',
-      fontSize: '16px',
     },
   },
 };
+const theme = createTheme({
+  type: 'light',
+  primary: 'blue',
+  accent: 'yellow',
+});
 
 class App extends React.Component<{}> {
   componentDidMount() {
@@ -48,17 +56,19 @@ class App extends React.Component<{}> {
 
   render() {
     return (
-      <Fragment>
-        <NavBar sections={sections} />
+      <Theme theme={theme}>
+        <Background>
+          <NavBar sections={sections} />
 
-        <main>
-          {sections.map(section => (
-            <section.Component key={section.name} />
-          ))}
-        </main>
+          <main>
+            {sections.map(section => (
+              <section.Component key={section.name} />
+            ))}
+          </main>
 
-        <Footer />
-      </Fragment>
+          <Footer />
+        </Background>
+      </Theme>
     );
   }
 }

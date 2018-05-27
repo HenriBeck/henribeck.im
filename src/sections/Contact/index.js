@@ -1,22 +1,16 @@
-// @flow strict
+// @flow strict-local
 
 import React from 'react';
 import injectSheet from 'react-jss';
 import {
-  EmailIcon,
-  GithubCircleIcon,
-  XingCircleIcon,
-  LinkedinIcon,
-} from 'mdi-react';
+  Typography,
+  Icon,
+  type ThemeType,
+} from 'materialize-react';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Container from '../../components/Container';
-import {
-  blackTextColor,
-  primaryBase,
-} from '../../styles';
-import createLink from '../../components/create-link';
 
 type Props = {
   classes: {
@@ -26,84 +20,74 @@ type Props = {
   },
 };
 
-const Link = createLink(blackTextColor);
 const name = 'contact';
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
+const styles = (theme: ThemeType) => {
+  return {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    },
 
-  iconContainer: { padding: 16 },
+    iconContainer: { padding: 16 },
 
-  icon: {
-    transition: 'fill 100ms linear',
-
-    '&:hover': { fill: primaryBase },
-  },
+    icon: { '&:hover': { color: theme.primary.base } },
+  };
 };
 
 function Contact(props: Props) {
   return (
     <Section name="contact">
       <Container>
-        <Header color={blackTextColor}>
+        <Header>
           Contact
         </Header>
 
         <div className={props.classes.container}>
           <span className={props.classes.iconContainer}>
-            <Link
+            <Typography
+              element="a"
+              typography="body1"
               href="mailto:henribeck.dev@gmail.com"
               aria-label="E-Mail"
             >
-              <EmailIcon
-                size={64}
-                color={blackTextColor}
+              <Icon
+                icon="email"
                 className={props.classes.icon}
+                size={64}
               />
-            </Link>
+            </Typography>
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link
+            <Typography
+              element="a"
+              typography="body1"
               href="https://github.com/HenriBeck"
               aria-label="GitHub Profile"
             >
-              <GithubCircleIcon
-                size={64}
-                color={blackTextColor}
+              <Icon
+                icon="github-circle"
                 className={props.classes.icon}
+                size={64}
               />
-            </Link>
+            </Typography>
           </span>
 
           <span className={props.classes.iconContainer}>
-            <Link
-              href="https://www.xing.com/profile/Henri_Beck2/cv"
-              aria-label="Xing Profile"
-            >
-              <XingCircleIcon
-                size={64}
-                color={blackTextColor}
-                className={props.classes.icon}
-              />
-            </Link>
-          </span>
-
-          <span className={props.classes.iconContainer}>
-            <Link
+            <Typography
+              element="a"
+              typography="body1"
               href="https://www.linkedin.com/in/henribeck/"
               aria-label="LinkedIn Profile"
             >
-              <LinkedinIcon
-                size={64}
-                color={blackTextColor}
+              <Icon
+                icon="linkedin"
                 className={props.classes.icon}
+                size={64}
               />
-            </Link>
+            </Typography>
           </span>
         </div>
       </Container>
