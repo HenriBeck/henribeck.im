@@ -34,7 +34,7 @@
     "prop-types": "15.6.1",
     "react": "16.4.0",
     "react-dom": "16.4.0",
-    "react-event-listener": "0.5.9",
+    "react-event-listener": "0.6.0",
     "react-ga": "2.5.3",
     "react-jss": "8.4.0",
     "rimraf": "2.6.2",

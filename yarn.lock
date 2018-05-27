@@ -5810,6 +5810,14 @@ react-event-listener@0.5.9:
     prop-types "^15.6.0"
     warning "^3.0.0"
 
+react-event-listener@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.0.tgz#f8cf2821f5ca1844e0df1dac1c7b9a3ecb686fd7"
+  dependencies:
+    "@babel/runtime" "^7.0.0-beta.42"
+    prop-types "^15.6.0"
+    warning "^3.0.0"
+
 react-ga@2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.5.3.tgz#0f447c73664c069a5fc341f6f431262e3d4c23c4"
