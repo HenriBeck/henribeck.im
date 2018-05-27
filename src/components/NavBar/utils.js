@@ -1,4 +1,4 @@
-// @flow strict
+// @flow strict-local
 
 export function scrollToSection(name: string) {
   const section = document.querySelector(`section[data-name="${name}"]`);

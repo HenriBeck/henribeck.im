@@ -1,4 +1,4 @@
-// @flow strict
+// @flow strict-local
 
 import React from 'react';
 import injectSheet from 'react-jss';
@@ -6,7 +6,6 @@ import injectSheet from 'react-jss';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Container from '../../components/Container';
-import { blackTextColor } from '../../styles';
 
 import Project from './Project';
 
@@ -18,13 +17,9 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    gridTemplateAreas: 'auto auto auto',
     gridGap: '48px 32px',
 
-    '@media only screen and (max-width: 760px)': {
-      gridTemplateColumns: '1fr',
-      gridTemplateAreas: 'auto',
-    },
+    '@media only screen and (max-width: 760px)': { gridTemplateColumns: '1fr' },
   },
 };
 
@@ -32,7 +27,7 @@ function Projects(props: Props) {
   return (
     <Section name="projects">
       <Container>
-        <Header color={blackTextColor}>
+        <Header>
           Projects
         </Header>
 

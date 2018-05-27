@@ -1,7 +1,8 @@
-// @flow strict
+// @flow strict-local-local
 
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
+import { Typography } from 'materialize-react';
 
 type Props = {
   children: Node,
@@ -9,7 +10,7 @@ type Props = {
   classes: {
     container: string,
     line: string,
-    text: string,
+    title: string,
   },
 };
 
@@ -28,15 +29,10 @@ const styles = {
     opacity: 0.8,
     maxWidth: 200,
     flex: 1,
-    backgroundColor: props => props.color,
+    backgroundColor: 'currentColor',
   },
 
-  text: {
-    fontSize: '3em',
-    lineHeight: 1.25,
-    padding: '0 16px',
-    color: props => props.color,
-  },
+  title: { padding: '0 16px' },
 };
 
 function Header(props: Props) {
@@ -44,9 +40,12 @@ function Header(props: Props) {
     <div className={`${props.classes.container} ${props.className || ''}`}>
       <div className={props.classes.line} />
 
-      <span className={props.classes.text}>
+      <Typography
+        typography="headline4"
+        className={props.classes.title}
+      >
         {props.children}
-      </span>
+      </Typography>
 
       <div className={props.classes.line} />
     </div>

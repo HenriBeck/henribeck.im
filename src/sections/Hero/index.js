@@ -1,14 +1,14 @@
-// @flow strict
+// @flow strict-local
 
 import React from 'react';
 import injectSheet from 'react-jss';
+import {
+  Typography,
+  type ThemeType,
+} from 'materialize-react';
 
 import Container from '../../components/Container';
 import Section from '../../components/Section';
-import {
-  primaryBase,
-  whiteTextColor,
-} from '../../styles';
 
 type Props = {
   classes: {
@@ -18,26 +18,20 @@ type Props = {
   },
 };
 
-const styles = {
-  section: {
-    marginTop: 0,
-    height: '65vh',
-    backgroundColor: primaryBase,
-    width: '100vw',
-    color: whiteTextColor,
-  },
+const styles = (theme: ThemeType) => {
+  return {
+    section: {
+      marginTop: 0,
+      height: '65vh',
+      backgroundColor: theme.primary.base,
+      width: '100vw',
+      color: '#ffffff',
+    },
 
-  title: {
-    marginTop: '20vh',
-    fontSize: '3.5em',
-    lineHeight: 1.25,
-  },
+    title: { marginTop: '20vh' },
 
-  caption: {
-    fontSize: '2em',
-    lineHeight: 1.25,
-    marginLeft: '50px',
-  },
+    caption: { marginLeft: '50px' },
+  };
 };
 const name = 'hero';
 
@@ -48,12 +42,18 @@ function Hero(props: Props) {
       name={name}
     >
       <Container>
-        <span className={props.classes.title}>
+        <Typography
+          typography="headline3"
+          className={props.classes.title}
+        >
           I&apos;m Henri
-        </span>
-        <span className={props.classes.caption}>
+        </Typography>
+        <Typography
+          typography="headline4"
+          className={props.classes.caption}
+        >
           A 19 year old JS Developer from Hamburg
-        </span>
+        </Typography>
       </Container>
     </Section>
   );

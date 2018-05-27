@@ -1,7 +1,8 @@
-// @flow strict
+// @flow strict-local
 
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
+import { Typography } from 'materialize-react';
 
 import { scrollToSection } from './utils';
 
@@ -27,8 +28,6 @@ const styles = {
   },
 
   text: {
-    fontSize: '1.5em',
-    lineHeight: 1,
     transition: 'transform 140ms linear',
     cursor: 'pointer',
     transform: props => `scale(${props.isSelected ? 1.1 : 1})`,
@@ -50,12 +49,13 @@ class Item extends React.PureComponent<Props> {
         className={this.props.classes.container}
         ref={this.createRef}
       >
-        <span
+        <Typography
+          typography="headline5"
           className={this.props.classes.text}
           onClick={this.handleClick}
         >
           {this.props.children}
-        </span>
+        </Typography>
       </div>
     );
   }

@@ -1,19 +1,22 @@
 // @flow
 
 import React from 'react'; // eslint-disable-line filenames/match-exported
-import Document, {
+import {
   Head,
   Main,
   NextScript,
 } from 'next/document';
+import PropTypes from 'prop-types';
 import {
   JssProvider,
   SheetsRegistry,
 } from 'react-jss';
+import 'mdi/css/materialdesignicons.css';
 
 type Options = { renderPage: <T>(T) => { html: string, errorHtml: string } };
+type Props = { css: string };
 
-export default class MyDocument extends Document {
+export default class MyDocument extends React.Component<Props> {
   static getInitialProps(options: Options) {
     const registry = new SheetsRegistry();
     const page = options.renderPage(Component => () => (
@@ -28,14 +31,25 @@ export default class MyDocument extends Document {
     };
   }
 
+  static childContextTypes = { _documentProps: PropTypes.any };
+
+  getChildContext() {
+    return { _documentProps: this.props };
+  }
+
   render() {
     return (
       <html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
             rel="stylesheet"
             key="font"
+          />
+
+          <link
+            rel="stylesheet"
+            href="/static/css/materialdesignicons.min.css"
           />
 
           <title key="title">Henri Beck | Personal Website</title>

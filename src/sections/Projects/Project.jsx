@@ -1,13 +1,8 @@
-// @flow strict
+// @flow strict-local
 
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
-
-import {
-  blackTextColor,
-  primaryBase,
-} from '../../styles';
-import createLink from '../../components/create-link';
+import { Typography } from 'materialize-react';
 
 type Props = {
   title: Node,
@@ -20,45 +15,40 @@ type Props = {
   },
 };
 
-const Link = createLink(blackTextColor);
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    color: blackTextColor,
   },
 
   title: {
-    fontSize: '1.5em',
-    lineHeight: 1.25,
     textDecoration: 'none',
     marginBottom: '10px',
-
-    '&:hover': { color: primaryBase },
   },
 
-  description: {
-    fontSize: '1.15em',
-    lineHeight: '1.5em',
-    textAlign: 'center',
-  },
+  description: { textAlign: 'center' },
 };
 
 function Project(props: Props) {
   return (
     <div className={props.classes.container}>
-      <Link
+      <Typography
+        typography="headline5"
+        element="a"
         className={props.classes.title}
         href={props.link}
       >
         {props.title}
-      </Link>
+      </Typography>
 
-      <span className={props.classes.description}>
+      <Typography
+        typography="body1"
+        className={props.classes.description}
+      >
         {props.children}
-      </span>
+      </Typography>
     </div>
   );
 }
