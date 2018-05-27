@@ -11,7 +11,7 @@
     "now": "now --token=$NOW_TOKEN"
   },
   "dependencies": {
-    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.47",
+    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.49",
     "@zeit/next-css": "0.2.0",
     "file-loader": "1.1.11",
     "jss": "9.8.1",
