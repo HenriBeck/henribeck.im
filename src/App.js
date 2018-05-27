@@ -1,6 +1,4 @@
-// @flow strict-local-local
-
-import 'normalize.css';
+// @flow strict-local
 
 import React from 'react';
 import injectSheet from 'react-jss';
@@ -32,7 +30,7 @@ const styles = {
       boxSizing: 'border-box',
     },
 
-    'body, #root': {
+    'body, #app': {
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
