@@ -11,12 +11,12 @@ import App from './App';
 /**
  * Register the service worker.
  */
-async function registerServiceWorker() {
+function registerServiceWorker() {
   // eslint-disable-next-line compat/compat
   if ('serviceWorker' in navigator && navigator.serviceWorker) {
     try {
       // eslint-disable-next-line compat/compat
-      await navigator.serviceWorker.register('/service-worker.js', { scope: '/' });
+      navigator.serviceWorker.register('/service-worker.js', { scope: '/' });
 
       // eslint-disable-next-line no-console
       console.log('Service Worker registered successfully');
