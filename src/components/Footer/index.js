@@ -95,9 +95,9 @@ function Footer(props: Props) {
             {' '}and{' '}
             <Link
               typography="body2"
-              href="https://github.com/zeit/next.js/"
+              href="https://webpack.js.org/"
             >
-              NextJS
+              Webpack
             </Link>
           </Typography>
 
