@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-serve --hot --open --config webpack.config.dev.js",
-    "start": "serve dist/ --single",
+    "start": "serve dist/",
     "prebuild": "rimraf dist/",
     "build": "webpack --config webpack.config.prod.js",
     "lint": "eslint src/",
