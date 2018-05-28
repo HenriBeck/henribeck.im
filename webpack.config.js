@@ -59,7 +59,7 @@ module.exports = {
       theme_color: colors.blue['500'],
       'theme-color': colors.blue['500'],
       start_url: '/',
-    }),
+    })
   ],
 
   resolve: { extensions: ['.js', '.jsx'] },

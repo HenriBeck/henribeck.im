@@ -13,7 +13,7 @@ import App from './App';
  */
 function registerServiceWorker() {
   // eslint-disable-next-line compat/compat
-  if ('serviceWorker' in navigator && navigator.serviceWorker) {
+  if (navigator.serviceWorker) {
     try {
       // eslint-disable-next-line compat/compat
       navigator.serviceWorker.register('/service-worker.js', { scope: '/' });
@@ -33,4 +33,6 @@ if (element) {
   render(<App />, element);
 }
 
-registerServiceWorker();
+if (!window.location.host.startsWith('localhost')) {
+  registerServiceWorker();
+}
