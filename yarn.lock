@@ -6159,9 +6159,9 @@ serve-handler@2.3.12:
     minimatch "3.0.4"
     path-to-regexp "2.2.1"
 
-serve@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/serve/-/serve-7.1.0.tgz#4eba44ef46b5d902fd650f9baf2fc8a2997ce405"
+serve@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/serve/-/serve-7.1.1.tgz#1d028cfcbad60aa977c9a399b9520849416cc72f"
   dependencies:
     "@zeit/schemas" "1.1.1"
     ajv "6.5.0"
