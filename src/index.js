@@ -3,7 +3,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import 'mdi/css/materialdesignicons.min.css';
 import 'normalize.css';
 
 import App from './App';

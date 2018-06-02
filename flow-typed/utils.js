@@ -28,3 +28,9 @@ declare module 'next/document' {
 
   declare export default Document;
 }
+
+declare module 'mdi-react' {
+  declare export function EmailIcon(): Node;
+  declare export function GithubCircleIcon(): Node;
+  declare export function LinkedinIcon(): Node;
+}

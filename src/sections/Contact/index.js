@@ -3,10 +3,14 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import {
-  Typography,
   Icon,
   type ThemeType,
 } from 'materialize-react';
+import {
+  EmailIcon,
+  GithubCircleIcon,
+  LinkedinIcon,
+} from 'mdi-react';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
@@ -30,9 +34,9 @@ const styles = (theme: ThemeType) => {
       alignItems: 'center',
     },
 
-    iconContainer: { padding: 16 },
+    iconContainer: { margin: '16px 32px' },
 
-    icon: { '&:hover': { color: theme.primary.base } },
+    icon: { '&:hover': { fill: theme.primary.base } },
   };
 };
 
@@ -45,50 +49,44 @@ function Contact(props: Props) {
         </Header>
 
         <div className={props.classes.container}>
-          <span className={props.classes.iconContainer}>
-            <Typography
-              element="a"
-              typography="body1"
-              href="mailto:henribeck.dev@gmail.com"
-              aria-label="E-Mail"
+          <a
+            className={props.classes.iconContainer}
+            href="mailto:henribeck.dev@gmail.com"
+            aria-label="E-Mail"
+          >
+            <Icon
+              className={props.classes.icon}
+              size={64}
             >
-              <Icon
-                icon="email"
-                className={props.classes.icon}
-                size={64}
-              />
-            </Typography>
-          </span>
+              <EmailIcon />
+            </Icon>
+          </a>
 
-          <span className={props.classes.iconContainer}>
-            <Typography
-              element="a"
-              typography="body1"
-              href="https://github.com/HenriBeck"
-              aria-label="GitHub Profile"
+          <a
+            className={props.classes.iconContainer}
+            href="https://github.com/HenriBeck"
+            aria-label="GitHub Profile"
+          >
+            <Icon
+              className={props.classes.icon}
+              size={64}
             >
-              <Icon
-                icon="github-circle"
-                className={props.classes.icon}
-                size={64}
-              />
-            </Typography>
-          </span>
+              <GithubCircleIcon />
+            </Icon>
+          </a>
 
-          <span className={props.classes.iconContainer}>
-            <Typography
-              element="a"
-              typography="body1"
-              href="https://www.linkedin.com/in/henribeck/"
-              aria-label="LinkedIn Profile"
+          <a
+            className={props.classes.iconContainer}
+            href="https://www.linkedin.com/in/henribeck/"
+            aria-label="LinkedIn Profile"
+          >
+            <Icon
+              className={props.classes.icon}
+              size={64}
             >
-              <Icon
-                icon="linkedin"
-                className={props.classes.icon}
-                size={64}
-              />
-            </Typography>
-          </span>
+              <LinkedinIcon />
+            </Icon>
+          </a>
         </div>
       </Container>
     </Section>
