@@ -898,7 +898,7 @@ ajv@6.5.0:
     json-schema-traverse "^0.3.0"
     uri-js "^4.2.1"
 
-ajv@^5.0.0, ajv@^5.1.0, ajv@^5.2.3, ajv@^5.3.0:
+ajv@^5.1.0, ajv@^5.2.3, ajv@^5.3.0:
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
@@ -1084,12 +1084,6 @@ async-each@^1.0.0:
 async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
-
-async@^2.4.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
-  dependencies:
-    lodash "^4.17.10"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -2752,15 +2746,6 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-text-webpack-plugin@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
-  dependencies:
-    async "^2.4.1"
-    loader-utils "^1.1.0"
-    schema-utils "^0.3.0"
-    webpack-sources "^1.0.1"
-
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -3916,10 +3901,6 @@ jss-nested@^6.0.1:
   dependencies:
     warning "^3.0.0"
 
-jss-normalize@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jss-normalize/-/jss-normalize-2.0.0.tgz#77047a09602310e8f86bc54dbcfaed383c584995"
-
 jss-preset-default@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/jss-preset-default/-/jss-preset-default-4.3.0.tgz#7bc91b0b282492557d36ed4e5c6d7c8cb3154bb8"
@@ -3951,17 +3932,17 @@ jss-vendor-prefixer@^7.0.0:
   dependencies:
     css-vendor "^0.3.8"
 
-jss@9.8.1, jss@^9.7.0:
-  version "9.8.1"
-  resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.1.tgz#e2ff250777ad657430e6edc47a63516541b888fa"
+jss@9.8.2:
+  version "9.8.2"
+  resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.2.tgz#09cabdfba831545bf094e399cfa45a1743daf4a6"
   dependencies:
     is-in-browser "^1.1.3"
     symbol-observable "^1.1.0"
     warning "^3.0.0"
 
-jss@9.8.2:
-  version "9.8.2"
-  resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.2.tgz#09cabdfba831545bf094e399cfa45a1743daf4a6"
+jss@^9.7.0:
+  version "9.8.1"
+  resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.1.tgz#e2ff250777ad657430e6edc47a63516541b888fa"
   dependencies:
     is-in-browser "^1.1.3"
     symbol-observable "^1.1.0"
@@ -4324,19 +4305,20 @@ markdown-escapes@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.1.tgz#1994df2d3af4811de59a6714934c2b2292734518"
 
-materialize-react@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/materialize-react/-/materialize-react-0.3.4.tgz#a1dda39b9b6b5b57efe85c392722f019023f50f5"
+materialize-react@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/materialize-react/-/materialize-react-0.3.5.tgz#8109b2506ef36dc16f62fa8ce3b22ff19d39fc54"
   dependencies:
     clamp "1.0.1"
-    jss "9.8.1"
+    jss "9.8.2"
     lodash.merge " 4.6.1"
     lodash.noop "3.0.1"
+    mdi-react "3.4.0"
     polished "1.9.2"
     prop-types "15.6.1"
     randomstring "1.1.5"
     react-context-subscriber "0.4.0"
-    react-event-listener "0.5.9"
+    react-event-listener "0.6.0"
     react-get-not-declared-props "1.0.0"
     react-jss "8.4.0"
     theming "1.3.0"
@@ -4356,9 +4338,9 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-mdi@2.2.43:
-  version "2.2.43"
-  resolved "https://registry.yarnpkg.com/mdi/-/mdi-2.2.43.tgz#c5e419a6e5f48c82c7109328f52530fd187a0ec0"
+mdi-react@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/mdi-react/-/mdi-react-3.4.0.tgz#62e6d6ba4f049707e78ca6bd891060add7199286"
 
 mdn-browser-compat-data@^0.0.20:
   version "0.0.20"
@@ -5662,15 +5644,6 @@ react-dom@16.4.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-event-listener@0.5.9:
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.5.9.tgz#c64e84f77156a682614835bdc1bc7ba00912df97"
-  dependencies:
-    "@babel/runtime" "^7.0.0-beta.42"
-    fbjs "^0.8.16"
-    prop-types "^15.6.0"
-    warning "^3.0.0"
-
 react-event-listener@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.0.tgz#f8cf2821f5ca1844e0df1dac1c7b9a3ecb686fd7"
@@ -6129,12 +6102,6 @@ safe-regex@^1.1.0:
 sax@>=0.6.0, sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
-
-schema-utils@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"
-  dependencies:
-    ajv "^5.0.0"
 
 schema-utils@^0.4.4, schema-utils@^0.4.5:
   version "0.4.5"
