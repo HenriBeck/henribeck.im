@@ -47,24 +47,17 @@ function Projects(props: Props) {
           </Project>
 
           <Project
-            title="react-smart-parallax"
-            link="https://github.com/HenriBeck/react-smart-parallax"
+            title="check-flow"
+            link="https://github.com/HenriBeck/check-flow"
           >
-            A React Component which renders a smart Parallax
-          </Project>
-
-          <Project
-            title="react-context-subscriber"
-            link="https://github.com/HenriBeck/react-context-subscriber"
-          >
-            A Higher-Order-Component for the new React Context
+            A better flow check cli with only ignoring errors from certain files
           </Project>
 
           <Project
             title="TF2Pickup (RIP)"
             link="https://github.com/TF2PickupNET"
           >
-            A website for a Pickup-System for Team Fortress 2
+            A webapp for a Pickup-System for Team Fortress 2
           </Project>
         </div>
       </Container>
