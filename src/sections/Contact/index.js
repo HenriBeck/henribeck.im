@@ -6,11 +6,9 @@ import {
   Icon,
   type ThemeType,
 } from 'materialize-react';
-import {
-  EmailIcon,
-  GithubCircleIcon,
-  LinkedinIcon,
-} from 'mdi-react';
+import EmailIcon from 'mdi-react/EmailIcon';
+import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
+import LinkedinIcon from 'mdi-react/LinkedinIcon';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
