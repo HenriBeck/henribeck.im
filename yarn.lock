@@ -1322,14 +1322,7 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     caniuse-db "^1.0.30000639"
     electron-to-chromium "^1.2.7"
 
-browserslist@^2.11.3:
-  version "2.11.3"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
-  dependencies:
-    caniuse-lite "^1.0.30000792"
-    electron-to-chromium "^1.3.30"
-
-browserslist@^3.0.0:
+browserslist@^3.0.0, browserslist@^3.2.7:
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.8.tgz#b0005361d6471f0f5952797a76fc985f1f978fc6"
   dependencies:
@@ -1461,13 +1454,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000846"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000846.tgz#d9c86f914738db4da098eeded997413c44561bd2"
 
-caniuse-db@^1.0.30000794:
-  version "1.0.30000830"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000830.tgz#6e45255b345649fd15ff59072da1e12bb3de2f13"
-
-caniuse-lite@^1.0.30000792:
-  version "1.0.30000830"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000830.tgz#cb96b8a2dd3cbfe04acea2af3c4e894249095328"
+caniuse-db@^1.0.30000843:
+  version "1.0.30000847"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000847.tgz#ff4072a5468809fec0ae9ac3b4035ef891e5b144"
 
 caniuse-lite@^1.0.30000844:
   version "1.0.30000846"
@@ -2165,7 +2154,7 @@ doctrine@1.5.0:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
-doctrine@^2.0.2, doctrine@^2.1.0:
+doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
   dependencies:
@@ -2263,10 +2252,6 @@ ee-first@1.1.1:
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.47:
   version "1.3.48"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.48.tgz#d3b0d8593814044e092ece2108fc3ac9aea4b900"
-
-electron-to-chromium@^1.3.30:
-  version "1.3.42"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.42.tgz#95c33bf01d0cc405556aec899fe61fd4d76ea0f9"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -2398,23 +2383,23 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-henribeck@4.19.6:
-  version "4.19.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-4.19.6.tgz#f8618233b12a4edae8a7b2c98660c3542f36321b"
+eslint-config-henribeck@4.19.7:
+  version "4.19.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-henribeck/-/eslint-config-henribeck-4.19.7.tgz#2c3889a6272880bf157bd07b7656a82988f769e1"
   dependencies:
     babel-eslint "8.2.3"
     eslint-import-resolver-node "0.3.2"
     eslint-plugin-ava "4.5.1"
-    eslint-plugin-compat "2.2.0"
+    eslint-plugin-compat "2.3.0"
     eslint-plugin-eslint-comments "2.0.2"
     eslint-plugin-filenames "1.2.0"
-    eslint-plugin-flowtype "2.47.1"
+    eslint-plugin-flowtype "2.49.3"
     eslint-plugin-fp "2.3.0"
     eslint-plugin-import "2.12.0"
     eslint-plugin-json "1.2.0"
-    eslint-plugin-markdown "1.0.0-beta.6"
-    eslint-plugin-promise "3.7.0"
-    eslint-plugin-react "7.8.2"
+    eslint-plugin-markdown "1.0.0-beta.8"
+    eslint-plugin-promise "3.8.0"
+    eslint-plugin-react "7.9.1"
     eslint-plugin-unicorn "4.0.3"
 
 eslint-import-resolver-node@0.3.2, eslint-import-resolver-node@^0.3.1:
@@ -2444,13 +2429,13 @@ eslint-plugin-ava@4.5.1:
     multimatch "^2.1.0"
     pkg-up "^2.0.0"
 
-eslint-plugin-compat@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-2.2.0.tgz#d612a9988d9fba66bcd8e86fcc1b551753aac995"
+eslint-plugin-compat@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-2.3.0.tgz#18d315cc68329844bd54dcc184be53d38a6f91c8"
   dependencies:
     babel-runtime "^6.26.0"
-    browserslist "^2.11.3"
-    caniuse-db "^1.0.30000794"
+    browserslist "^3.2.7"
+    caniuse-db "^1.0.30000843"
     mdn-browser-compat-data "^0.0.20"
     requireindex "^1.1.0"
 
@@ -2470,9 +2455,9 @@ eslint-plugin-filenames@1.2.0:
     lodash.snakecase "4.1.1"
     lodash.upperfirst "4.3.1"
 
-eslint-plugin-flowtype@2.47.1:
-  version "2.47.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.47.1.tgz#1be0d6b855dbf8f253fcf49ea3d44bf6c23ff984"
+eslint-plugin-flowtype@2.49.3:
+  version "2.49.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.49.3.tgz#ccca6ee5ba2027eb3ed36bc2ec8c9a842feee841"
   dependencies:
     lodash "^4.17.10"
 
@@ -2506,26 +2491,26 @@ eslint-plugin-json@1.2.0:
   dependencies:
     jshint "^2.8.0"
 
-eslint-plugin-markdown@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-1.0.0-beta.6.tgz#d9e62666eea4e76387e85f502df668abdfbd4395"
+eslint-plugin-markdown@1.0.0-beta.8:
+  version "1.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-1.0.0-beta.8.tgz#8d10707fdc551dc28ed9e14bd03c18f776e2fb76"
   dependencies:
     object-assign "^4.0.1"
     remark-parse "^3.0.0"
     unified "^6.1.2"
 
-eslint-plugin-promise@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.7.0.tgz#f4bde5c2c77cdd69557a8f69a24d1ad3cfc9e67e"
+eslint-plugin-promise@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.8.0.tgz#65ebf27a845e3c1e9d6f6a5622ddd3801694b621"
 
-eslint-plugin-react@7.8.2:
-  version "7.8.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.8.2.tgz#e95c9c47fece55d2303d1a67c9d01b930b88a51d"
+eslint-plugin-react@7.9.1:
+  version "7.9.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.9.1.tgz#101aadd15e7c7b431ed025303ac7b421a8e3dc15"
   dependencies:
-    doctrine "^2.0.2"
-    has "^1.0.1"
+    doctrine "^2.1.0"
+    has "^1.0.2"
     jsx-ast-utils "^2.0.1"
-    prop-types "^15.6.0"
+    prop-types "^15.6.1"
 
 eslint-plugin-unicorn@4.0.3:
   version "4.0.3"
@@ -3174,6 +3159,12 @@ has@^1.0.1:
   resolved "https://registry.yarnpkg.com/has/-/has-1.0.1.tgz#8461733f538b0837c9361e39a9ab9e9704dc2f28"
   dependencies:
     function-bind "^1.0.2"
+
+has@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/has/-/has-1.0.2.tgz#1a64bfe4b52e67fb87b9822503d97c019fb6ba42"
+  dependencies:
+    function-bind "^1.1.1"
 
 hash-base@^3.0.0:
   version "3.0.4"
@@ -4042,13 +4033,6 @@ koa@^2.4.1:
     type-is "^1.5.5"
     vary "^1.0.0"
 
-last-call-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
-  dependencies:
-    lodash "^4.17.5"
-    webpack-sources "^1.1.0"
-
 latest-version@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
@@ -4887,13 +4871,6 @@ opn@^5.1.0, opn@^5.3.0:
   resolved "https://registry.yarnpkg.com/opn/-/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
   dependencies:
     is-wsl "^1.1.0"
-
-optimize-css-assets-webpack-plugin@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-4.0.2.tgz#813d511d20fe5d9a605458441ed97074d79c1122"
-  dependencies:
-    cssnano "^3.10.0"
-    last-call-webpack-plugin "^3.0.0"
 
 optionator@^0.8.2:
   version "0.8.2"
