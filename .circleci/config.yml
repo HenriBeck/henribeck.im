@@ -68,16 +68,17 @@ jobs:
 workflows:
   version: 2
 
-  deploy:
-    jobs:
-      - deploy-master:
-          filters:
-            branches:
-              only:
-                - master
-
   test:
     jobs:
       - lint
       - flow
       - build
+      - deploy-master:
+          requires:
+            - lint
+            - flow
+            - build
+          filters:
+            branches:
+              only:
+                - master
