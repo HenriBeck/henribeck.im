@@ -51,6 +51,6 @@
     "flow-bin": "0.74.0",
     "flow-checker": "0.3.0",
     "now": "11.2.2",
-    "webpack-serve": "1.0.3"
+    "webpack-serve": "1.0.4"
   }
 }
