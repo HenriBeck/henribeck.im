@@ -12,12 +12,12 @@
     "now": "now --token=$NOW_TOKEN"
   },
   "dependencies": {
-    "@babel/core": "7.0.0-beta.49",
-    "@babel/plugin-proposal-class-properties": "7.0.0-beta.50",
-    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.50",
-    "@babel/preset-env": "7.0.0-beta.49",
-    "@babel/preset-flow": "7.0.0-beta.50",
-    "@babel/preset-react": "7.0.0-beta.49",
+    "@babel/core": "7.0.0-beta.51",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.51",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.51",
+    "@babel/preset-env": "7.0.0-beta.51",
+    "@babel/preset-flow": "7.0.0-beta.51",
+    "@babel/preset-react": "7.0.0-beta.51",
     "babel-loader": "8.0.0-beta.3",
     "css-loader": "0.28.11",
     "file-loader": "1.1.11",
