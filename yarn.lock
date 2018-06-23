@@ -4250,6 +4250,10 @@ mdi-react@3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/mdi-react/-/mdi-react-3.4.0.tgz#62e6d6ba4f049707e78ca6bd891060add7199286"
 
+mdi-react@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/mdi-react/-/mdi-react-4.0.0.tgz#dc0f06e6c9ae69c5ce468f8ae51a8bd76e3409db"
+
 mdn-browser-compat-data@^0.0.20:
   version "0.0.20"
   resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.20.tgz#26e4a226d96cc5318fdc504d6dfd86907752da5c"
