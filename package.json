@@ -46,7 +46,7 @@
     "webpack-pwa-manifest": "3.6.2"
   },
   "devDependencies": {
-    "eslint": "4.19.1",
+    "eslint": "5.0.0",
     "eslint-config-henribeck": "4.19.7",
     "flow-bin": "0.75.0",
     "flow-checker": "0.3.0",
