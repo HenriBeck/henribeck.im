@@ -6,7 +6,7 @@ import { Typography } from 'materialize-react';
 
 type Props = {
   title: Node,
-  children: Node,
+  description: string,
   link: string,
   classes: {
     container: string,
@@ -47,7 +47,7 @@ function Project(props: Props) {
         typography="body1"
         className={props.classes.description}
       >
-        {props.children}
+        {props.description}
       </Typography>
     </div>
   );

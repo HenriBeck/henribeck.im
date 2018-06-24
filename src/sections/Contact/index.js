@@ -2,40 +2,26 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import {
-  Icon,
-  type ThemeType,
-} from 'materialize-react';
 import EmailIcon from 'mdi-react/EmailIcon';
 import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
-import LinkedinIcon from 'mdi-react/LinkedinIcon';
+import LinkedInIcon from 'mdi-react/LinkedinIcon';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Container from '../../components/Container';
 
-type Props = {
-  classes: {
-    container: string,
-    iconContainer: string,
-    icon: string,
-  },
-};
+import ContactLink from './ContactLink';
+
+type Props = { classes: { container: string } };
 
 const name = 'contact';
-const styles = (theme: ThemeType) => {
-  return {
-    container: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-    },
-
-    iconContainer: { margin: '16px 32px' },
-
-    icon: { '&:hover': { fill: theme.primary.base } },
-  };
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
 };
 
 function Contact(props: Props) {
@@ -47,44 +33,23 @@ function Contact(props: Props) {
         </Header>
 
         <div className={props.classes.container}>
-          <a
-            className={props.classes.iconContainer}
+          <ContactLink
             href="mailto:henribeck.dev@gmail.com"
-            aria-label="E-Mail"
-          >
-            <Icon
-              className={props.classes.icon}
-              size={64}
-            >
-              <EmailIcon />
-            </Icon>
-          </a>
+            label="E-Mail"
+            icon={EmailIcon}
+          />
 
-          <a
-            className={props.classes.iconContainer}
+          <ContactLink
             href="https://github.com/HenriBeck"
-            aria-label="GitHub Profile"
-          >
-            <Icon
-              className={props.classes.icon}
-              size={64}
-            >
-              <GithubCircleIcon />
-            </Icon>
-          </a>
+            label="GitHub Profile"
+            icon={GithubCircleIcon}
+          />
 
-          <a
-            className={props.classes.iconContainer}
+          <ContactLink
             href="https://www.linkedin.com/in/henribeck/"
-            aria-label="LinkedIn Profile"
-          >
-            <Icon
-              className={props.classes.icon}
-              size={64}
-            >
-              <LinkedinIcon />
-            </Icon>
-          </a>
+            label="LinkedIn Profile"
+            icon={LinkedInIcon}
+          />
         </div>
       </Container>
     </Section>

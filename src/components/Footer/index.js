@@ -10,11 +10,12 @@ import {
 import Link from '../Link';
 import Container from '../Container';
 
+import LegalInfo from './LegalInfo';
+
 type Props = {
   classes: {
     footer: string,
     container: string,
-    imprint: string,
     bottomContainer: string,
   },
 };
@@ -34,13 +35,6 @@ const styles = {
 
   container: { color: theme.text.primary },
 
-  imprint: {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    gridGap: '4px',
-    textAlign: 'center',
-  },
-
   bottomContainer: {
     display: 'flex',
     flexDirection: 'row',
@@ -54,27 +48,7 @@ function Footer(props: Props) {
   return (
     <footer className={props.classes.footer}>
       <Container className={props.classes.container}>
-        <div className={props.classes.imprint}>
-          <Typography typography="body1">
-            Impressum
-          </Typography>
-
-          <Typography typography="body2">
-            <strong>Owner: </strong>Henri Beck
-          </Typography>
-
-          <Typography typography="body2">
-            <strong>Address: </strong>Stiefmütterchenweg 14,  22607 Hamburg
-          </Typography>
-
-          <Typography typography="body2">
-            <strong>Phone: </strong>+49 151 70118484
-          </Typography>
-
-          <Typography typography="body2">
-            <strong>E-Mail: </strong>henribeck.dev@gmail.com
-          </Typography>
-        </div>
+        <LegalInfo />
 
         <div className={props.classes.bottomContainer}>
           <Typography typography="body2">

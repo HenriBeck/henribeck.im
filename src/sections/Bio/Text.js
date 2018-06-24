@@ -4,7 +4,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import { Typography } from 'materialize-react';
 
-import Link from '../../components/Link';
+import createLink from './create-link';
 
 type Props = { classes: { grid: string } };
 
@@ -41,28 +41,11 @@ function Text(props: Props) {
         <br />
         <br />
         In the summer of 2017, I finally graduated from school.
-        I started studying IT in the October of 2017 at{' '}
-        <Link
-          href="https://fh-wedel.de"
-          color="primary"
-        >
-          FH Wedel
-        </Link>.
+        I started studying IT in the October of 2017 at {createLink('https://fh-wedel.de', 'FH Wedel')}.
         <br />
-        In March 2018  I was a Coach at the<br />
-        <Link
-          href="https://code.design"
-          color="primary"
-        >
-          Code+Design
-        </Link>
-        {' '}Camp in Hamburg and also attended the{' '}
-        <Link
-          href="https://code.design"
-          color="primary"
-        >
-          Code+Design
-        </Link> Camp in May 2018 in Cologne as a Coach again.
+        In March 2018  I was a Coach at the {createLink('https://code.design', 'Code+Design')}{' '}
+        Camp in Hamburg and also attended the {createLink('https://code.design', 'Code+Design')}{' '}
+        Camp in May 2018 in Cologne as a Coach again.
       </Typography>
     </div>
   );
