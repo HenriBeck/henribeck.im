@@ -22,6 +22,31 @@ const styles = {
     '@media only screen and (max-width: 760px)': { gridTemplateColumns: '1fr' },
   },
 };
+const projects = [{
+  title: 'Jss',
+  link: 'https://github.com/cssinjs',
+  description: 'JSS is an authoring tool for CSS which uses JavaScript as a host language',
+}, {
+  title: 'check-flow',
+  link: 'https://github.com/HenriBeck/check-flow',
+  description: 'A better flow check cli with only ignoring errors from certain files',
+}, {
+  title: 'react-context-subscriber',
+  link: 'https://github.com/HenriBeck/react-context-subscriber',
+  description: 'A Higher-Order-Component for the new React Context',
+}, {
+  title: 'react-get-not-declared-props',
+  link: 'https://github.com/HenriBeck/react-get-not-declared-props',
+  description: 'A utility function to get the not declared props from a component',
+}, {
+  title: 'TF2Pickup (RIP)',
+  link: 'https://github.com/TF2PickupNET',
+  description: 'A webapp for a Pickup-System for Team Fortress 2',
+}, {
+  title: 'eslint-config-henribeck',
+  link: 'https://github.com/HenriBeck/eslint-config-henribeck',
+  description: 'My personal ESLint config',
+}];
 
 function Projects(props: Props) {
   return (
@@ -32,33 +57,12 @@ function Projects(props: Props) {
         </Header>
 
         <div className={props.classes.grid}>
-          <Project
-            title="materialize-react"
-            link="https://github.com/HenriBeck/materialize-react"
-          >
-            A React component libary which implements the Material Design Language
-          </Project>
-
-          <Project
-            title="Jss"
-            link="https://github.com/cssinjs"
-          >
-            JSS is an authoring tool for CSS which uses JavaScript as a host language
-          </Project>
-
-          <Project
-            title="check-flow"
-            link="https://github.com/HenriBeck/check-flow"
-          >
-            A better flow check cli with only ignoring errors from certain files
-          </Project>
-
-          <Project
-            title="TF2Pickup (RIP)"
-            link="https://github.com/TF2PickupNET"
-          >
-            A webapp for a Pickup-System for Team Fortress 2
-          </Project>
+          {projects.map(project => (
+            <Project
+              key={project.title}
+              {...project}
+            />
+          ))}
         </div>
       </Container>
     </Section>
