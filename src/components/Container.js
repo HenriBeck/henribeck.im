@@ -5,13 +5,13 @@ import injectSheet from 'react-jss';
 
 type Props = {
   children: Node,
-  className?: string,
+  className: string,
   classes: { container: string },
 };
 
 const styles = {
   container: {
-    display: 'inline-flex',
+    display: 'flex',
     flexDirection: 'column',
     maxWidth: '800px',
     width: '100%',
@@ -22,7 +22,7 @@ const styles = {
 
 function Container(props: Props) {
   return (
-    <div className={`${props.classes.container} ${props.className || ''}`}>
+    <div className={`${props.classes.container} ${props.className}`}>
       {props.children}
     </div>
   );

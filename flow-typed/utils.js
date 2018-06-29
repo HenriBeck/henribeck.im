@@ -29,14 +29,9 @@ declare module 'next/document' {
   declare export default Document;
 }
 
-declare module 'mdi-react/EmailIcon' {
-  declare export default function EmailIcon(): Node;
-}
-
-declare module 'mdi-react/GithubCircleIcon' {
-  declare export default function GithubCircleIcon(): Node;
-}
-
-declare module 'mdi-react/LinkedinIcon' {
-  declare export default function LinkedinIcon(): Node;
+declare module 'antd' {
+  declare export class Icon extends Component<{
+    type: string,
+    className: string,
+  }> {}
 }

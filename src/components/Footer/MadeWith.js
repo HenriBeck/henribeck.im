@@ -2,7 +2,6 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import { Typography } from 'materialize-react';
 
 import createLink from './create-link';
 
@@ -15,19 +14,20 @@ const styles = {
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     marginTop: 16,
+    fontSize: '0.9rem',
   },
 };
 
 function MadeWith(props: Props) {
   return (
     <div className={props.classes.container}>
-      <Typography typography="body2">
+      <span>
         Made with {createLink('ReactJS', 'https://reactjs.org/')}{' '}
         and {createLink('react-jss', 'https://github.com/cssinjs/react-jss')}{' '}
         and {createLink('Webpack', 'https://webpack.js.org/')}
-      </Typography>
+      </span>
 
-      <Typography typography="body2">© 2018</Typography>
+      <span>© 2018</span>
     </div>
   );
 }

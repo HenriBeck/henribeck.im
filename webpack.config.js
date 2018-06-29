@@ -1,9 +1,10 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { colors } = require('materialize-react');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+const ACTIVE_COLOR = '#1890ff';
 
 module.exports = {
   entry: { app: path.resolve(__dirname, 'src/index.js') },
@@ -50,9 +51,9 @@ module.exports = {
       name: 'Henri Beck',
       short_name: 'Henri Beck',
       description: 'Personal Website of Henri Beck',
-      background_color: colors.blue['500'],
-      theme_color: colors.blue['500'],
-      'theme-color': colors.blue['500'],
+      background_color: ACTIVE_COLOR,
+      theme_color: ACTIVE_COLOR,
+      'theme-color': ACTIVE_COLOR,
       start_url: '/',
     })
   ],

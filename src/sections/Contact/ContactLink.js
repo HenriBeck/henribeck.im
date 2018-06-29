@@ -1,46 +1,44 @@
 // @flow strict-local
 
-import React, { type ComponentType } from 'react';
+import React from 'react';
 import injectSheet from 'react-jss';
-import {
-  Icon as IconWrapper,
-  type ThemeType,
-} from 'materialize-react';
+import { Icon } from 'antd';
+
+import Link from '../../components/Link';
+import { ACTIVE_COLOR } from '../../colors';
 
 type Props = {
   href: string,
   label: string,
-  icon: ComponentType<{}>,
+  icon: string,
   classes: {
     iconContainer: string,
     icon: string,
   },
 };
 
-const styles = (theme: ThemeType) => {
-  return {
-    iconContainer: { margin: '16px 32px' },
+const styles = {
+  iconContainer: { margin: '16px 32px' },
 
-    icon: { '&:hover': { fill: theme.primary.base } },
-  };
+  icon: {
+    fontSize: '64px',
+
+    '&:hover': { color: ACTIVE_COLOR },
+  },
 };
 
 function ContactLink(props: Props) {
-  const Icon = props.icon;
-
   return (
-    <a
+    <Link
       className={props.classes.iconContainer}
       href={props.href}
       aria-label={props.label}
     >
-      <IconWrapper
+      <Icon
         className={props.classes.icon}
-        size={64}
-      >
-        <Icon />
-      </IconWrapper>
-    </a>
+        type={props.icon}
+      />
+    </Link>
   );
 }
 

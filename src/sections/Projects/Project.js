@@ -2,7 +2,8 @@
 
 import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
-import { Typography } from 'materialize-react';
+
+import Link from '../../components/Link';
 
 type Props = {
   title: Node,
@@ -26,6 +27,7 @@ const styles = {
   title: {
     textDecoration: 'none',
     marginBottom: '10px',
+    fontSize: '1.5rem',
   },
 
   description: { textAlign: 'center' },
@@ -34,21 +36,16 @@ const styles = {
 function Project(props: Props) {
   return (
     <div className={props.classes.container}>
-      <Typography
-        typography="headline5"
-        element="a"
+      <Link
         className={props.classes.title}
         href={props.link}
       >
         {props.title}
-      </Typography>
+      </Link>
 
-      <Typography
-        typography="body1"
-        className={props.classes.description}
-      >
+      <span className={props.classes.description}>
         {props.description}
-      </Typography>
+      </span>
     </div>
   );
 }

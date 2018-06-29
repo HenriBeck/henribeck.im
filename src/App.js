@@ -3,11 +3,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import ReactGA from 'react-ga';
-import {
-  Theme,
-  createTheme,
-  Background,
-} from 'materialize-react';
 
 import Hero from './sections/Hero';
 import Bio from './sections/Bio';
@@ -15,6 +10,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import { DARK_TEXT_COLOR } from './colors';
 
 const sections = [
   Hero,
@@ -24,26 +20,16 @@ const sections = [
 ];
 const styles = {
   '@global': {
-    '*': {
-      padding: 0,
-      margin: 0,
-      boxSizing: 'border-box',
-    },
-
     'body, #app': {
       position: 'relative',
-      display: 'flex',
-      flexDirection: 'column',
       width: '100vw',
       minHeight: '100vh',
+      fontSize: '1.25rem',
+      color: DARK_TEXT_COLOR,
+      lineHeight: 1.25,
     },
   },
 };
-const theme = createTheme({
-  type: 'light',
-  primary: 'blue',
-  accent: 'yellow',
-});
 
 class App extends React.Component<{}> {
   componentDidMount() {
@@ -54,19 +40,17 @@ class App extends React.Component<{}> {
 
   render() {
     return (
-      <Theme theme={theme}>
-        <Background>
-          <NavBar sections={sections} />
+      <React.Fragment>
+        <NavBar sections={sections} />
 
-          <main>
-            {sections.map(section => (
-              <section.Component key={section.name} />
-            ))}
-          </main>
+        <main>
+          {sections.map(section => (
+            <section.Component key={section.name} />
+          ))}
+        </main>
 
-          <Footer />
-        </Background>
-      </Theme>
+        <Footer />
+      </React.Fragment>
     );
   }
 }

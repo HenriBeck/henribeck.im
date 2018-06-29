@@ -5,4 +5,8 @@ module.exports = {
     'henribeck/react',
     'henribeck/flow'
   ],
+
+  rules: {
+    'react/require-default-props': 'off',
+  },
 };
