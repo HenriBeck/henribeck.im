@@ -12,5 +12,5 @@ export default function createLink(text: string, href: string) {
     >
       {text}
     </Link>
-  )
+  );
 }
