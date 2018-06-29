@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('bundle-analyzer-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = require('./webpack.config');
 
