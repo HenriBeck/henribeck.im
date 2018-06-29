@@ -2,41 +2,48 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import { Typography } from 'materialize-react';
 
-type Props = { classes: { legalInfo: string } };
+type Props = {
+  classes: {
+    legalInfo: string,
+    title: string,
+  },
+};
 
 const styles = {
   legalInfo: {
+    fontSize: '0.9rem',
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridGap: '4px',
     textAlign: 'center',
   },
+
+  title: { fontSize: '1rem' },
 };
 
 function LegalInfo(props: Props) {
   return (
     <div className={props.classes.legalInfo}>
-      <Typography typography="body1">
+      <span className={props.classes.title}>
         Impressum
-      </Typography>
+      </span>
 
-      <Typography typography="body2">
+      <span>
         <strong>Owner: </strong>Henri Beck
-      </Typography>
+      </span>
 
-      <Typography typography="body2">
+      <span>
         <strong>Address: </strong>Stiefmütterchenweg 14,  22607 Hamburg
-      </Typography>
+      </span>
 
-      <Typography typography="body2">
+      <span>
         <strong>Phone: </strong>+49 151 70118484
-      </Typography>
+      </span>
 
-      <Typography typography="body2">
+      <span>
         <strong>E-Mail: </strong>henribeck.dev@gmail.com
-      </Typography>
+      </span>
     </div>
   );
 }

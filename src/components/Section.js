@@ -7,7 +7,7 @@ type Props = {
   classes: { section: string },
   children: Node,
   name: string,
-  className?: string,
+  className: string,
 };
 
 const styles = {
@@ -15,14 +15,14 @@ const styles = {
     width: '100vw',
     display: 'flex',
     justifyContent: 'center',
-    margin: '25px 0 75px 0',
+    margin: '0 0 75px 0',
   },
 };
 
 function Section(props: Props) {
   return (
     <section
-      className={`${props.classes.section} ${props.className || ''}`}
+      className={`${props.classes.section} ${props.className}`}
       data-name={props.name}
     >
       {props.children}

@@ -2,9 +2,12 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import { createTheme } from 'materialize-react';
 
 import Container from '../Container';
+import {
+  FOOTER_BG_COLOR,
+  LIGHT_TEXT_COLOR,
+} from '../../colors';
 
 import LegalInfo from './LegalInfo';
 import MadeWith from './MadeWith';
@@ -16,20 +19,17 @@ type Props = {
   },
 };
 
-const theme = createTheme({
-  type: 'dark',
-  primary: 'blue',
-  accent: 'yellow',
-});
 const styles = {
   footer: {
+    width: '100vw',
     display: 'flex',
+    flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#282B2E',
+    backgroundColor: FOOTER_BG_COLOR,
     padding: '16px 0',
   },
 
-  container: { color: theme.text.primary },
+  container: { color: LIGHT_TEXT_COLOR },
 };
 
 function Footer(props: Props) {

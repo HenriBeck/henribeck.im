@@ -2,13 +2,13 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import {
-  Typography,
-  type ThemeType,
-} from 'materialize-react';
 
 import Container from '../../components/Container';
 import Section from '../../components/Section';
+import {
+  ACTIVE_COLOR,
+  LIGHT_TEXT_COLOR,
+} from '../../colors';
 
 type Props = {
   classes: {
@@ -18,20 +18,25 @@ type Props = {
   },
 };
 
-const styles = (theme: ThemeType) => {
-  return {
-    section: {
-      marginTop: 0,
-      height: '65vh',
-      backgroundColor: theme.primary.base,
-      width: '100vw',
-      color: '#ffffff',
-    },
+const styles = {
+  section: {
+    marginTop: 0,
+    height: '65vh',
+    backgroundColor: ACTIVE_COLOR,
+    width: '100vw',
+  },
 
-    title: { marginTop: '20vh' },
+  title: {
+    color: LIGHT_TEXT_COLOR,
+    margin: '20vh 0 0 0',
+    fontSize: '4rem',
+  },
 
-    caption: { marginLeft: '50px' },
-  };
+  caption: {
+    color: LIGHT_TEXT_COLOR,
+    margin: '0 0 0 50px',
+    fontSize: '3.3rem',
+  },
 };
 const name = 'hero';
 
@@ -42,18 +47,13 @@ function Hero(props: Props) {
       name={name}
     >
       <Container>
-        <Typography
-          typography="headline3"
-          className={props.classes.title}
-        >
+        <h1 className={props.classes.title}>
           I&apos;m Henri
-        </Typography>
-        <Typography
-          typography="headline4"
-          className={props.classes.caption}
-        >
+        </h1>
+
+        <h2 className={props.classes.caption}>
           A 19 year old JS Developer from Hamburg
-        </Typography>
+        </h2>
       </Container>
     </Section>
   );

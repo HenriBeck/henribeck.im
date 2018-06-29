@@ -39,7 +39,7 @@ const projects = [{
   link: 'https://github.com/HenriBeck/react-get-not-declared-props',
   description: 'A utility function to get the not declared props from a component',
 }, {
-  title: 'TF2Pickup (RIP)',
+  title: 'TF2Pickup',
   link: 'https://github.com/TF2PickupNET',
   description: 'A webapp for a Pickup-System for Team Fortress 2',
 }, {

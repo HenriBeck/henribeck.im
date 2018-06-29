@@ -3,13 +3,15 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import EventListener from 'react-event-listener';
-import { type ThemeType } from 'materialize-react';
 
 import Container from '../Container';
+import { ACTIVE_COLOR } from '../../colors';
 
 import Item from './Item';
-import { scrollToSection } from './utils';
-import Progress from './Progress';
+import {
+  getCurrentSection,
+  scrollToSection,
+} from './utils';
 
 type Props = {
   sections: $ReadOnlyArray<{
@@ -21,98 +23,49 @@ type Props = {
     container: string,
   },
 };
-type State = {
-  scale: number,
-  selectedSection: string | null,
-};
+type State = { currentSection: string | null };
 
-const styles = (theme: ThemeType) => {
-  return {
-    navbar: {
-      backgroundColor: theme.primary.base,
-      height: 64,
-      display: 'flex',
-      justifyContent: 'center',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 1,
-      color: '#ffffff',
+const styles = {
+  navbar: {
+    backgroundColor: ACTIVE_COLOR,
+    height: 64,
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1,
+    color: '#ffffff',
+  },
 
-      '@media screen and (max-width: 700px)': { backgroundColor: theme.primary.dark },
-    },
-
-    container: { flexDirection: 'row' },
-  };
+  container: { flexDirection: 'row' },
 };
 
 class NavBar extends React.Component<Props, State> {
-  state = {
-    scale: 0,
-    selectedSection: null,
-  };
+  state = { currentSection: null };
 
   componentDidMount() {
-    this.offsetTop = window.innerHeight * 0.15;
-    this.offsetBottom = window.innerHeight * 0.75;
-    this.maxViewport = window.innerHeight * 0.6;
-    this.lastSectionName = this.props.sections[this.props.sections.length - 1].name;
-
     if (window.location.hash) {
       scrollToSection(window.location.hash.slice(1));
     }
 
-    this.calculateNewScale();
+    this.sections = [...document.querySelectorAll('section')];
+
+    this.updateCurrentSection();
   }
 
   componentDidUpdate(prevProps: Props, prevState: State) {
     if (
-      prevState.selectedSection !== this.state.selectedSection
-      && this.state.selectedSection !== null
+      prevState.currentSection !== this.state.currentSection
+      && this.state.currentSection !== null
     ) {
-      window.location.hash = `#${this.state.selectedSection}`;
+      window.location.hash = `#${this.state.currentSection}`;
     }
   }
 
-  offsetTop: number;
-
-  offsetBottom: number;
-
-  maxViewport: number;
-
-  lastSectionName: string;
-
-  items: Map<string, HTMLElement | null> = new Map();
-
-  getActiveSection() {
-    return [...document.querySelectorAll('section')].reduce((currentSection, section) => {
-      const rect = section.getBoundingClientRect();
-
-      if (rect.top > this.offsetBottom || rect.bottom < this.offsetTop) {
-        return currentSection;
-      }
-
-      const top = Math.max(this.offsetTop, rect.top);
-      const bottom = Math.min(this.offsetBottom, rect.bottom);
-      const calculatedSpace = (bottom - top) / this.maxViewport;
-
-      if (calculatedSpace > currentSection.calculatedSpace) {
-        return {
-          calculatedSpace,
-          section,
-        };
-      }
-
-      return currentSection;
-    }, {
-      calculatedSpace: 0,
-      section: null,
-    });
-  }
-
-  calculateNewScale() {
-    const activeSection = this.getActiveSection();
+  updateCurrentSection() {
+    const activeSection = getCurrentSection(this.sections);
 
     if (activeSection.section === null) {
       return;
@@ -121,34 +74,30 @@ class NavBar extends React.Component<Props, State> {
     const sectionName = activeSection.section.getAttribute('data-name');
 
     this.setState((state) => {
-      if (state.selectedSection === sectionName) {
+      if (state.currentSection === sectionName) {
         return null;
       }
 
-      if (sectionName === this.lastSectionName) {
-        return {
-          selectedSection: sectionName,
-          scale: 1,
-        };
-      }
-
-      const navItem = typeof sectionName === 'string' ? this.items.get(sectionName) : null;
-      const right = navItem ? navItem.getBoundingClientRect().right : 0;
-
-      return {
-        selectedSection: sectionName,
-        scale: right / window.innerWidth,
-      };
+      return { currentSection: sectionName };
     });
   }
 
-  createRef = (name: string, element: HTMLElement | null) => {
-    this.items.set(name, element);
+  handleScroll = () => {
+    this.updateCurrentSection();
   };
 
-  handleScroll = () => {
-    this.calculateNewScale();
-  };
+  renderSectionItems() {
+    return this.props.sections.map(section => (
+      <Item
+        name={section.name}
+        createRef={this.createRef}
+        key={section.name}
+        isSelected={section.name === this.state.currentSection}
+      >
+        {section.NavItem}
+      </Item>
+    ));
+  }
 
   render() {
     return (
@@ -158,19 +107,8 @@ class NavBar extends React.Component<Props, State> {
           onScroll={this.handleScroll}
         />
 
-        <Progress scale={this.state.scale} />
-
         <Container className={this.props.classes.container}>
-          {this.props.sections.map(section => (
-            <Item
-              name={section.name}
-              createRef={this.createRef}
-              key={section.name}
-              isSelected={section.name === this.state.selectedSection}
-            >
-              {section.NavItem}
-            </Item>
-          ))}
+          {this.renderSectionItems()}
         </Container>
       </nav>
     );

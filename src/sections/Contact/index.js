@@ -2,9 +2,6 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-import EmailIcon from 'mdi-react/EmailIcon';
-import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
-import LinkedInIcon from 'mdi-react/LinkedinIcon';
 
 import Header from '../../components/Header';
 import Section from '../../components/Section';
@@ -36,19 +33,19 @@ function Contact(props: Props) {
           <ContactLink
             href="mailto:henribeck.dev@gmail.com"
             label="E-Mail"
-            icon={EmailIcon}
+            icon="mail"
           />
 
           <ContactLink
             href="https://github.com/HenriBeck"
             label="GitHub Profile"
-            icon={GithubCircleIcon}
+            icon="github"
           />
 
           <ContactLink
             href="https://www.linkedin.com/in/henribeck/"
             label="LinkedIn Profile"
-            icon={LinkedInIcon}
+            icon="linkedin"
           />
         </div>
       </Container>
