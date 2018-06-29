@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = require('./webpack.config');
 
@@ -7,6 +8,10 @@ module.exports = merge(config, {
   mode: 'production',
 
   plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      generateStatsFile: true,
+    }),
     // Service worker
     new SWPrecacheWebpackPlugin({
       cacheId: 'henribeck-website',
