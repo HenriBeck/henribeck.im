@@ -11,10 +11,8 @@ import App from './App';
  * Register the service worker.
  */
 function registerServiceWorker() {
-  // eslint-disable-next-line compat/compat
   if (navigator.serviceWorker) {
     try {
-      // eslint-disable-next-line compat/compat
       navigator.serviceWorker.register('/service-worker.js', { scope: '/' });
 
       // eslint-disable-next-line no-console

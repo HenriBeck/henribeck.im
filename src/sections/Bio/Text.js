@@ -28,7 +28,6 @@ function Text(props: Props) {
         So I started programming in my free time
         and teaching myself the basics of the Web.
         <br />
-        <br />
         At some point, I wanted to build something actually useful,
         so I started looking into Server Development and started
         learning NodeJS as I already knew JavaScript.
@@ -38,7 +37,6 @@ function Text(props: Props) {
         In 2016 I started learning ReactJS because I was tired of JQuery.
         I also joined TF2Pickup in 2016 and started building the new
         website with NodeJS and ReactJS. The project sadly died at the end of 2017.
-        <br />
         <br />
         In the summer of 2017, I finally graduated from school.
         I started studying IT in the October of 2017 at {createLink('https://fh-wedel.de', 'FH Wedel')}.
