@@ -8,12 +8,12 @@ import Link from '../../components/Link';
 import { ACTIVE_COLOR } from '../../colors';
 
 type Props = {
-  href: string,
-  label: string,
-  icon: string,
-  classes: {
-    iconContainer: string,
-    icon: string,
+  +href: string,
+  +label: string,
+  +icon: string,
+  +classes: {
+    +iconContainer: string,
+    +icon: string,
   },
 };
 

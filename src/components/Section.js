@@ -4,10 +4,10 @@ import React, { type Node } from 'react';
 import injectSheet from 'react-jss';
 
 type Props = {
-  classes: { section: string },
-  children: Node,
-  name: string,
-  className: string,
+  +classes: { +section: string },
+  +children: Node,
+  +name: string,
+  +className: string,
 };
 
 const styles = {

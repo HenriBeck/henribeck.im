@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 
 import createLink from './create-link';
 
-type Props = { classes: { container: string } };
+type Props = { +classes: { +container: string } };
 
 const styles = {
   container: {

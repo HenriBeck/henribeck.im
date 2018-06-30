@@ -8,5 +8,6 @@ module.exports = {
 
   rules: {
     'react/require-default-props': 'off',
+    'react/default-props-match-prop-types': 'off',
   },
 };
