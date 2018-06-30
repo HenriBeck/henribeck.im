@@ -27,6 +27,7 @@ const styles = {
       fontSize: '1.25rem',
       color: DARK_TEXT_COLOR,
       lineHeight: 1.25,
+      fontFamily: '\'Roboto\', sans-serif',
     },
   },
 };
