@@ -4,9 +4,9 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 type Props = {
-  classes: {
-    legalInfo: string,
-    title: string,
+  +classes: {
+    +legalInfo: string,
+    +title: string,
   },
 };
 

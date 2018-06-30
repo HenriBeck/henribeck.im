@@ -9,7 +9,7 @@ import Container from '../../components/Container';
 
 import ContactLink from './ContactLink';
 
-type Props = { classes: { container: string } };
+type Props = { +classes: { +container: string } };
 
 const name = 'contact';
 const styles = {

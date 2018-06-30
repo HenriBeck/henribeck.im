@@ -9,7 +9,7 @@ import Container from '../../components/Container';
 
 import Project from './Project';
 
-type Props = { classes: { grid: string } };
+type Props = { +classes: { +grid: string } };
 
 const name = 'projects';
 

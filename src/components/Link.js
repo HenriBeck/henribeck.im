@@ -7,10 +7,10 @@ import injectSheet from 'react-jss';
 import { DARK_TEXT_COLOR } from '../colors';
 
 type Props = {|
-  children: Node,
-  href: string,
-  className: string,
-  classes: { link: string },
+  +children: Node,
+  +href: string,
+  +className: string,
+  +classes: { +link: string },
 |};
 
 const styles = {

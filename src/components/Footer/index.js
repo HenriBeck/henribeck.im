@@ -13,9 +13,9 @@ import LegalInfo from './LegalInfo';
 import MadeWith from './MadeWith';
 
 type Props = {
-  classes: {
-    footer: string,
-    container: string,
+  +classes: {
+    +footer: string,
+    +container: string,
   },
 };
 

@@ -14,16 +14,16 @@ import {
 } from './utils';
 
 type Props = {
-  sections: $ReadOnlyArray<{
-    name: string,
-    NavItem: string,
+  +sections: $ReadOnlyArray<{
+    +name: string,
+    +NavItem: string,
   }>,
-  classes: {
-    navbar: string,
-    container: string,
+  +classes: {
+    +navbar: string,
+    +container: string,
   },
 };
-type State = { currentSection: string | null };
+type State = { +currentSection: string | null };
 
 const styles = {
   navbar: {
