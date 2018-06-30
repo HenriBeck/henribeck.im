@@ -28,14 +28,14 @@ const styles = {
 
   title: {
     color: LIGHT_TEXT_COLOR,
-    margin: '20vh 0 0 0',
-    fontSize: '4rem',
+    margin: '15vh 0 0 0',
+    fontSize: '3.3rem',
   },
 
   caption: {
     color: LIGHT_TEXT_COLOR,
     margin: '0 0 0 50px',
-    fontSize: '3.3rem',
+    fontSize: '2.75rem',
   },
 };
 const name = 'hero';
@@ -48,11 +48,11 @@ function Hero(props: Props) {
     >
       <Container>
         <h1 className={props.classes.title}>
-          I&apos;m Henri
+          I&apos;m Henri,
         </h1>
 
         <h2 className={props.classes.caption}>
-          A 19 year old JS Developer from Hamburg
+          a 19 year old JS Developer from Hamburg
         </h2>
       </Container>
     </Section>
