@@ -6,13 +6,13 @@ import injectSheet from 'react-jss';
 import Link from '../../components/Link';
 
 type Props = {
-  title: Node,
-  description: string,
-  link: string,
-  classes: {
-    container: string,
-    title: string,
-    description: string,
+  +title: Node,
+  +description: string,
+  +link: string,
+  +classes: {
+    +container: string,
+    +title: string,
+    +description: string,
   },
 };
 

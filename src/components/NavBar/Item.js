@@ -6,11 +6,11 @@ import injectSheet from 'react-jss';
 import { scrollToSection } from './utils';
 
 type Props = {
-  name: string,
-  children: Node,
-  classes: {
-    container: string,
-    text: string,
+  +name: string,
+  +children: Node,
+  +classes: {
+    +container: string,
+    +text: string,
   },
 };
 

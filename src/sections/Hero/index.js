@@ -11,10 +11,10 @@ import {
 } from '../../colors';
 
 type Props = {
-  classes: {
-    section: string,
-    title: string,
-    caption: string,
+  +classes: {
+    +section: string,
+    +title: string,
+    +caption: string,
   },
 };
 
