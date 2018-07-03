@@ -832,7 +832,7 @@
     "@webassemblyjs/wast-parser" "1.5.12"
     long "^3.2.0"
 
-"@webpack-contrib/config-loader@^1.0.0", "@webpack-contrib/config-loader@^1.1.1":
+"@webpack-contrib/config-loader@^1.1.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@webpack-contrib/config-loader/-/config-loader-1.1.2.tgz#e711f5c0b5adcdb0cfa6952d287657d2f0aa5194"
   dependencies:
@@ -841,6 +841,20 @@
     cosmiconfig "^5.0.2"
     loud-rejection "^1.6.0"
     merge-options "^1.0.1"
+    resolve "^1.6.0"
+    webpack-log "^1.1.2"
+
+"@webpack-contrib/config-loader@^1.2.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@webpack-contrib/config-loader/-/config-loader-1.2.1.tgz#5b3dd474e207437939d294d200c68b7b00008e04"
+  dependencies:
+    "@webpack-contrib/schema-utils" "^1.0.0-beta.0"
+    chalk "^2.1.0"
+    cosmiconfig "^5.0.2"
+    is-plain-obj "^1.1.0"
+    loud-rejection "^1.6.0"
+    merge-options "^1.0.1"
+    minimist "^1.2.0"
     resolve "^1.6.0"
     webpack-log "^1.1.2"
 
@@ -7908,11 +7922,11 @@ webpack-bundle-analyzer@2.13.1:
     opener "^1.4.3"
     ws "^4.0.0"
 
-webpack-command@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/webpack-command/-/webpack-command-0.3.1.tgz#e1917d48e3285da6c1d8e5c0a432cab031c3970f"
+webpack-command@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/webpack-command/-/webpack-command-0.4.0.tgz#31d30b3ba3ef8f339e2c84d89d18c06fa0550363"
   dependencies:
-    "@webpack-contrib/config-loader" "^1.0.0"
+    "@webpack-contrib/config-loader" "^1.2.0"
     "@webpack-contrib/schema-utils" "^1.0.0-beta.0"
     camelcase "^5.0.0"
     chalk "^2.3.2"
