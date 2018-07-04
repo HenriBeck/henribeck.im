@@ -1634,9 +1634,9 @@ chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
 
-check-flow@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.0.0.tgz#2edf2b1123663a56ade36ab48b7371901fadce97"
+check-flow@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.0.1.tgz#76390e686007c21b9498e3ae280667a0456b3b34"
   dependencies:
     debug "^3.1.0"
     ignore "^4.0.2"
