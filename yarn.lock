@@ -7621,9 +7621,9 @@ webpack-pwa-manifest@3.6.2:
     jimp "^0.2.28"
     mime "^1.6.0"
 
-webpack-serve@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-serve/-/webpack-serve-2.0.0.tgz#1449996e92505d889784ffb7b427159ac28d6e14"
+webpack-serve@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-serve/-/webpack-serve-2.0.1.tgz#2359e91bf068cae2cb4db1a6cfb81a1cdac2f4cf"
   dependencies:
     "@shellscape/koa-static" "^4.0.4"
     "@webpack-contrib/cli-utils" "^1.0.1"
