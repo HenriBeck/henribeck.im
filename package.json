@@ -12,7 +12,7 @@
     "now": "now --token=$NOW_TOKEN"
   },
   "dependencies": {
-    "@babel/core": "7.0.0-beta.53",
+    "@babel/core": "7.0.0-beta.52",
     "@babel/plugin-proposal-class-properties": "7.0.0-beta.53",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.52",
     "@babel/preset-env": "7.0.0-beta.53",
