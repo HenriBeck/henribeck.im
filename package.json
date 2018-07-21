@@ -50,7 +50,7 @@
     "check-flow": "1.0.1",
     "eslint": "5.2.0",
     "eslint-config-henribeck": "5.1.1",
-    "flow-bin": "0.76.0",
+    "flow-bin": "0.77.0",
     "now": "11.2.10",
     "webpack-serve": "2.0.2"
   }
