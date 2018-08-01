@@ -1624,14 +1624,14 @@ chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
 
-check-flow@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.0.1.tgz#76390e686007c21b9498e3ae280667a0456b3b34"
+check-flow@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.0.2.tgz#a2afb544be927b8b60d4e9d746dfacc64d57f7fb"
   dependencies:
-    debug "^3.1.0"
-    ignore "^4.0.2"
-    ora "^2.1.0"
-    yargs "^12.0.1"
+    debug "3.1.0"
+    ignore "4.0.3"
+    ora "3.0.0"
+    yargs "12.0.1"
 
 check-types@^7.3.0:
   version "7.4.0"
@@ -2111,7 +2111,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@*, debug@^3.1.0:
+debug@*, debug@3.1.0, debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -3534,6 +3534,10 @@ ignore-walk@^3.0.1:
   resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-3.0.1.tgz#a83e62e7d272ac0e3b551aaa82831a19b69f82f8"
   dependencies:
     minimatch "^3.0.4"
+
+ignore@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.3.tgz#e2d58c9654d75b542529fa28d80ac95b29e4f467"
 
 ignore@^3.3.8:
   version "3.3.10"
@@ -5096,6 +5100,17 @@ optionator@^0.8.2:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
+
+ora@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-3.0.0.tgz#8179e3525b9aafd99242d63cc206fd64732741d0"
+  dependencies:
+    chalk "^2.3.1"
+    cli-cursor "^2.1.0"
+    cli-spinners "^1.1.0"
+    log-symbols "^2.2.0"
+    strip-ansi "^4.0.0"
+    wcwidth "^1.0.1"
 
 ora@^2.1.0:
   version "2.1.0"
@@ -7856,7 +7871,7 @@ yargs-parser@^10.1.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@^12.0.1:
+yargs@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-12.0.1.tgz#6432e56123bb4e7c3562115401e98374060261c2"
   dependencies:
