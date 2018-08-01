@@ -89,9 +89,9 @@ class NavBar extends React.Component<Props, State> {
   renderSectionItems() {
     return this.props.sections.map(section => (
       <Item
+        key={section.name}
         name={section.name}
         createRef={this.createRef}
-        key={section.name}
         isSelected={section.name === this.state.currentSection}
       >
         {section.NavItem}
