@@ -7,6 +7,7 @@ import ReactGA from 'react-ga';
 import Hero from './sections/Hero';
 import Bio from './sections/Bio';
 import Projects from './sections/Projects';
+import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
@@ -16,6 +17,7 @@ const sections = [
   Hero,
   Bio,
   Projects,
+  Skills,
   Contact,
 ];
 const styles = {
