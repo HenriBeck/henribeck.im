@@ -615,11 +615,11 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.56"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.56"
 
-"@babel/runtime@^7.0.0-beta.42":
-  version "7.0.0-beta.49"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-beta.49.tgz#03b3bf07eb982072c8e851dd2ddd5110282e61bf"
+"@babel/runtime@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-beta.42.tgz#352e40c92e0460d3e82f49bd7e79f6cda76f919f"
   dependencies:
-    core-js "^2.5.6"
+    core-js "^2.5.3"
     regenerator-runtime "^0.11.1"
 
 "@babel/template@7.0.0-beta.44":
@@ -1921,13 +1921,9 @@ core-js@^2.0.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.5.tgz#b14dde936c640c0579a6b50cabcc132dd6127e3b"
 
-core-js@^2.4.0:
+core-js@^2.4.0, core-js@^2.5.3:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
-
-core-js@^2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.6.tgz#0fe6d45bf3cac3ac364a9d72de7576f4eb221b9d"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -6139,11 +6135,11 @@ react-dom@16.4.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-event-listener@0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.1.tgz#41c7a80a66b398c27dd511e22712b02f3d4eccca"
+react-event-listener@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.2.tgz#df405e9578be052b77a76e4c3914686637caecff"
   dependencies:
-    "@babel/runtime" "^7.0.0-beta.42"
+    "@babel/runtime" "7.0.0-beta.42"
     prop-types "^15.6.0"
     warning "^4.0.1"
 
