@@ -15,6 +15,7 @@
     "antd": "3.7.3",
     "jss": "9.8.7",
     "jss-camel-case": "^6.1.0",
+    "jss-default-unit": "^8.0.2",
     "jss-global": "^3.0.0",
     "jss-nested": "^6.0.1",
     "jss-vendor-prefixer": "^8.0.1",
