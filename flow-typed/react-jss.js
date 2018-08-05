@@ -1,24 +1,18 @@
-import type {
-  ComponentType,
-  ComponentProps,
+// @flow
+
+// eslint-disable-next-line no-unused-vars
+import React, {
+  type ComponentType,
+  type ElementConfig,
 } from 'react';
-import {
-  SheetsRegistry,
-  JssProvider,
-} from 'react-jss';
+import Jss from 'jss/src/Jss';
 
 declare module 'react-jss' {
   declare type Styles = { [key: string]: {} };
-  declare type ThemedStyles = (theme: {}) => Styles;
-  declare function HoC<C: ComponentType<{}>>(comp: C): ComponentType<ComponentProps<C>>;
-  declare function injectSheet<C>(styles: ThemedStyles | Styles): HoC<C>;
 
-  declare export var SheetsRegistry: SheetsRegistry;
-  declare export var JssProvider: JssProvider;
+  declare export class JssProvider extends React.Component<{ jss: Jss }> {}
 
-  declare export default typeof injectSheet;
-}
+  declare type HOC<C> = ComponentType<ElementConfig<C>>;
 
-declare module 'jss-normalize' {
-  declare export default {};
+  declare export default function styles(styles: Styles): <C: ComponentType<{}>>(comp: C) => HOC<C>;
 }
