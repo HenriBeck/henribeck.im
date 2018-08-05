@@ -1,13 +1,16 @@
+// @flow
+
 const merge = require('webpack-merge');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
-const config = require('./webpack.config');
+const config = require('./webpack.common.config');
 
 module.exports = merge(config, {
   mode: 'production',
 
   plugins: [
+    // Create a report on how many bytes are being used
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       generateStatsFile: true,

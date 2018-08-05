@@ -1,6 +1,14 @@
+// @flow
+
 module.exports = {
   presets: [
-    '@babel/preset-env',
+    ['@babel/preset-env', {
+      useBuiltIns: 'usage',
+      targets: {
+        chrome: 67,
+        firefox: 61,
+      },
+    }],
     '@babel/preset-react',
     '@babel/preset-flow',
   ],

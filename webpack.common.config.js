@@ -1,8 +1,11 @@
+// @flow
+
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const ACTIVE_COLOR = '#1890ff';
 
@@ -31,11 +34,36 @@ module.exports = {
 
   optimization: {
     runtimeChunk: 'single',
+    noEmitOnErrors: true,
+    splitChunks: {
+      cacheGroups: {
+        // Cache the node_modules
+        vendors: {
+          name: 'vendors',
+          test: /.+node_modules.+\.js$/,
+          chunks: 'all',
+          enforce: true,
+        },
+
+        styles: {
+          // Bundle all of the css into one file
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
     minimizer: [
+      new OptimizeCSSAssetsPlugin({}),
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
         sourceMap: true,
+        uglifyOptions: {
+          warnings: false,
+          output: { comments: false },
+        },
       }),
     ],
   },
@@ -49,13 +77,17 @@ module.exports = {
     }),
     new WebpackPwaManifest({
       name: 'Henri Beck',
+      // eslint-disable-next-line camelcase
       short_name: 'Henri Beck',
       description: 'Personal Website of Henri Beck',
+      // eslint-disable-next-line camelcase
       background_color: ACTIVE_COLOR,
+      // eslint-disable-next-line camelcase
       theme_color: ACTIVE_COLOR,
       'theme-color': ACTIVE_COLOR,
+      // eslint-disable-next-line camelcase
       start_url: '/',
-    })
+    }),
   ],
 
   resolve: { extensions: ['.js', '.jsx'] },
