@@ -6,6 +6,9 @@ import injectSheet from 'react-jss';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import Container from '../../components/Container';
+import GitHub from '../../icons/GitHub';
+import EMail from '../../icons/EMail';
+import LinkedIn from '../../icons/LinkedIn';
 
 import ContactLink from './ContactLink';
 
@@ -33,19 +36,19 @@ function Contact(props: Props) {
           <ContactLink
             href="mailto:henribeck.dev@gmail.com"
             label="E-Mail"
-            icon="mail"
+            icon={EMail}
           />
 
           <ContactLink
             href="https://github.com/HenriBeck"
             label="GitHub Profile"
-            icon="github"
+            icon={GitHub}
           />
 
           <ContactLink
             href="https://www.linkedin.com/in/henribeck/"
             label="LinkedIn Profile"
-            icon="linkedin"
+            icon={LinkedIn}
           />
         </div>
       </Container>

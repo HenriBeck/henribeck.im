@@ -6,13 +6,13 @@ import injectSheet from 'react-jss';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
 import Section from '../../components/Section';
+import ReactJS from '../../icons/ReactJS';
+import NodeJS from '../../icons/NodeJS';
+import MongoDB from '../../icons/MongoDB';
+import CSSinJS from '../../icons/CSSinJS';
+import HTML from '../../icons/HTML';
 
 import Skill from './Skill';
-import ReactIcon from './icons/ReactIcon';
-import NodeJSIcon from './icons/NodeJSIcon';
-import MongoDBIcon from './icons/MongoDBIcon';
-import CSSinJSIcon from './icons/CSSinJSIcon';
-import HTMLIcon from './icons/HTMLIcon';
 
 type Props = { classes: { grid: string } };
 
@@ -29,23 +29,23 @@ const styles = {
 const skills = [{
   display: 'React JS',
   description: 'PWA and SPA and Component development with React JS (Redux etc.)',
-  icon: ReactIcon,
+  icon: ReactJS,
 }, {
   display: 'Node JS',
   description: 'Server Development and CLI tools with JavaScript',
-  icon: NodeJSIcon,
+  icon: NodeJS,
 }, {
   display: 'MongoDB + Mongoose',
   description: 'MongoDB development with mongoose or the native driver',
-  icon: MongoDBIcon,
+  icon: MongoDB,
 }, {
   display: 'CSSinJS',
   description: 'No, CSSinJS isn\'t a joke. It\'s actually pretty cool and performs well.',
-  icon: CSSinJSIcon,
+  icon: CSSinJS,
 }, {
   display: 'HTML + CSS',
   description: 'Obviously, who doesn\'t know HTML and CSS?',
-  icon: HTMLIcon,
+  icon: HTML,
 }];
 
 function Skills(props: Props) {

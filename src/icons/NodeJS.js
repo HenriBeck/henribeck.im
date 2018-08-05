@@ -25,9 +25,9 @@ const path = [
   '10.89 12.09,10.35C12.09,9.9 12.29,9.3 14,9.3C15.5,9.3 16.09,9.63 16.32,10.66C16.34,',
   '10.76 16.43,10.83 16.53,10.83H17.5C17.55,10.83 17.61,10.81 17.65,10.76C17.69,',
   '10.72 17.72,10.66 17.7,10.6C17.56,8.82 16.38,8 14,8Z',
-];
+].join('');
 
-export default function NodeJSIcon(props: Props) {
+export default function NodeJS(props: Props) {
   return (
     <svg
       className={props.className}
@@ -35,7 +35,7 @@ export default function NodeJSIcon(props: Props) {
     >
       <path
         fill={props.color}
-        d={path.join('')}
+        d={path}
       />
     </svg>
   );

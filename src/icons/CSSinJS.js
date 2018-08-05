@@ -10,7 +10,7 @@ type Props = {
 const boxPath = [
   'M96,107.5H0v-95h96V107.5z M1.803,105.705h92.393v-91.41H1.803C1.803,',
   '14.295,1.803,105.705,1.803,105.705z',
-];
+].join('');
 const textPath = [
   'M64.294 86.574c1.903 3.108 4.379 5.392 8.759 5.392 3.679 0 6.029-1.839 6.029',
   '-4.379 0-3.044-2.414-4.123-6.464-5.894l-2.219-.952c-6.407-2.729-10.663-6.149',
@@ -26,9 +26,9 @@ const textPath = [
   '3-8.246 0-13.573-3.929-16.18-9.079l7.216-4.193zm-63.393.77c1.395 2.475 2.664 4.567 5.714 ',
   '4.567 2.917 0 4.757-1.141 4.757-5.579V56.141h8.878v30.31c0 9.193-5.39 13.378-13.258 13.378-',
   '7.109 0-11.226-3.679-13.32-8.11l7.229-4.375c0-.001 0 0 0 0z',
-];
+].join('');
 
-export default function CSSinJSIcon(props: Props) {
+export default function CSSinJS(props: Props) {
   return (
     <svg
       className={props.className}
@@ -41,12 +41,12 @@ export default function CSSinJSIcon(props: Props) {
 
       <path
         fill={props.color}
-        d={boxPath.join('')}
+        d={boxPath}
       />
 
       <path
         fill={props.color}
-        d={textPath.join('')}
+        d={textPath}
       />
     </svg>
   );
