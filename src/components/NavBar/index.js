@@ -23,7 +23,7 @@ type Props = {
     +container: string,
   },
 };
-type State = { +currentSection: string | null };
+type State = { currentSection: string | null };
 
 const styles = {
   navbar: {
@@ -44,6 +44,8 @@ const styles = {
 
 class NavBar extends React.Component<Props, State> {
   state = { currentSection: null };
+
+  sections: $ReadOnlyArray<HTMLElement>;
 
   componentDidMount() {
     if (window.location.hash) {
@@ -82,8 +84,12 @@ class NavBar extends React.Component<Props, State> {
     });
   }
 
-  handleScroll = () => {
-    this.updateCurrentSection();
+  handleScroll = {
+    handler: () => this.updateCurrentSection(),
+    options: {
+      passive: true,
+      capture: false,
+    },
   };
 
   renderSectionItems() {
@@ -91,7 +97,6 @@ class NavBar extends React.Component<Props, State> {
       <Item
         key={section.name}
         name={section.name}
-        createRef={this.createRef}
         isSelected={section.name === this.state.currentSection}
       >
         {section.NavItem}
