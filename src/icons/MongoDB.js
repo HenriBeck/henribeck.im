@@ -1,5 +1,6 @@
 // @flow
 
+// eslint-disable-next-line filenames/match-regex
 import React from 'react';
 
 type Props = {

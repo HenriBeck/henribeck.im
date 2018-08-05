@@ -4,7 +4,10 @@ import React, { type ComponentType } from 'react';
 import injectSheet from 'react-jss';
 
 import Link from '../../components/Link';
-import { ACTIVE_COLOR, DARK_TEXT_COLOR } from '../../colors';
+import {
+  ACTIVE_COLOR,
+  DARK_TEXT_COLOR,
+} from '../../colors';
 
 type Props = {
   +href: string,
