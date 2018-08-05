@@ -4232,7 +4232,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jss-camel-case@^6.1.0:
+jss-camel-case@6.1.0, jss-camel-case@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jss-camel-case/-/jss-camel-case-6.1.0.tgz#ccb1ff8d6c701c02a1fed6fb6fb6b7896e11ce44"
   dependencies:
@@ -4244,7 +4244,7 @@ jss-compose@^5.0.0:
   dependencies:
     warning "^3.0.0"
 
-jss-default-unit@^8.0.2:
+jss-default-unit@8.0.2, jss-default-unit@^8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/jss-default-unit/-/jss-default-unit-8.0.2.tgz#cc1e889bae4c0b9419327b314ab1c8e2826890e6"
 
@@ -4258,11 +4258,11 @@ jss-extend@^6.2.0:
   dependencies:
     warning "^3.0.0"
 
-jss-global@^3.0.0:
+jss-global@3.0.0, jss-global@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/jss-global/-/jss-global-3.0.0.tgz#e19e5c91ab2b96353c227e30aa2cbd938cdaafa2"
 
-jss-nested@^6.0.1:
+jss-nested@6.0.1, jss-nested@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/jss-nested/-/jss-nested-6.0.1.tgz#ef992b79d6e8f63d939c4397b9d99b5cbbe824ca"
   dependencies:
@@ -4293,17 +4293,17 @@ jss-template@^1.0.1:
   dependencies:
     warning "^3.0.0"
 
+jss-vendor-prefixer@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-8.0.1.tgz#80bcf2840fad7c383e3215e9098b2b7d549f91ac"
+  dependencies:
+    css-vendor "^1.1.0"
+
 jss-vendor-prefixer@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-7.0.0.tgz#0166729650015ef19d9f02437c73667231605c71"
   dependencies:
     css-vendor "^0.3.8"
-
-jss-vendor-prefixer@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-8.0.1.tgz#80bcf2840fad7c383e3215e9098b2b7d549f91ac"
-  dependencies:
-    css-vendor "^1.1.0"
 
 jss@9.8.7, jss@^9.7.0:
   version "9.8.7"
@@ -5280,7 +5280,7 @@ opn@^5.1.0, opn@^5.3.0:
   dependencies:
     is-wsl "^1.1.0"
 
-optimize-css-assets-webpack-plugin@^5.0.0:
+optimize-css-assets-webpack-plugin@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.0.tgz#8c9adf00e841871f627f82a8097a4f9fcc314de4"
   dependencies:
