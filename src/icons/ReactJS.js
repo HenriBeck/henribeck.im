@@ -1,5 +1,6 @@
 // @flow
 
+// eslint-disable-next-line filenames/match-regex
 import React from 'react';
 
 type Props = {
@@ -36,9 +37,9 @@ const path = [
   '9.28 7.77,9.33 7.5,9.39C7.57,9.67 7.68,9.96 7.79,10.25L8.08,9.74M10.97,5.7C9.38,4.2 8,',
   '3.62 7.37,4C6.74,4.35 6.55,5.82 7.06,7.96C7.83,7.8 8.64,7.68 9.46,7.6C9.94,6.93 10.45,',
   '6.29 10.97,5.7Z',
-];
+].join('');
 
-export default function ReactIcon(props: Props) {
+export default function ReactJS(props: Props) {
   return (
     <svg
       className={props.className}
@@ -46,7 +47,7 @@ export default function ReactIcon(props: Props) {
     >
       <path
         fill={props.color}
-        d={path.join('')}
+        d={path}
       />
     </svg>
   );
