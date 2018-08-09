@@ -27,12 +27,12 @@
     "react-jss": "8.6.1"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.56",
-    "@babel/plugin-proposal-class-properties": "7.0.0-beta.56",
-    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.56",
-    "@babel/preset-env": "7.0.0-beta.56",
-    "@babel/preset-flow": "7.0.0-beta.56",
-    "@babel/preset-react": "7.0.0-beta.56",
+    "@babel/core": "7.0.0-rc.0",
+    "@babel/plugin-proposal-class-properties": "7.0.0-rc.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-rc.0",
+    "@babel/preset-env": "7.0.0-rc.0",
+    "@babel/preset-flow": "7.0.0-rc.0",
+    "@babel/preset-react": "7.0.0-rc.1",
     "babel-loader": "8.0.0-beta.4",
     "babel-plugin-import": "1.8.0",
     "check-flow": "1.0.2",
