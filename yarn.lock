@@ -4937,9 +4937,9 @@ normalize.css@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
 
-now@11.3.11:
-  version "11.3.11"
-  resolved "https://registry.yarnpkg.com/now/-/now-11.3.11.tgz#ae9abcbacbca85a55fba3f42b616ad041290f399"
+now@11.3.12:
+  version "11.3.12"
+  resolved "https://registry.yarnpkg.com/now/-/now-11.3.12.tgz#ecdc7fbc74de8987c8cd8ad4148451b7b613cf3f"
 
 npm-bundled@^1.0.1:
   version "1.0.3"
