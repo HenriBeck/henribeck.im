@@ -37,7 +37,7 @@
     "babel-plugin-import": "1.8.0",
     "check-flow": "1.0.2",
     "css-loader": "1.0.0",
-    "eslint": "5.4.0",
+    "eslint": "5.5.0",
     "eslint-config-henribeck": "5.4.2",
     "file-loader": "2.0.0",
     "flow-bin": "0.80.0",
