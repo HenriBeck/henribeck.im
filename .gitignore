@@ -11,3 +11,6 @@ yarn-error.log*
 
 # Build directory
 dist/
+
+# IntelliJ config files
+.idea/
