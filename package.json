@@ -33,7 +33,7 @@
     "@babel/preset-env": "7.0.0",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
-    "babel-loader": "8.0.0",
+    "babel-loader": "8.0.1",
     "babel-plugin-import": "1.8.0",
     "check-flow": "1.0.2",
     "css-loader": "1.0.0",
