@@ -38,7 +38,7 @@
     "check-flow": "1.0.2",
     "css-loader": "1.0.0",
     "eslint": "5.5.0",
-    "eslint-config-henribeck": "5.4.2",
+    "eslint-config-henribeck": "5.5.0",
     "file-loader": "2.0.0",
     "flow-bin": "0.80.0",
     "html-webpack-plugin": "3.2.0",
