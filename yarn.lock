@@ -2820,9 +2820,9 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-express-static-gzip@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/express-static-gzip/-/express-static-gzip-1.1.1.tgz#4db5d43460bab6ec19a1c299e6d5757cb4cdb8f7"
+express-static-gzip@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/express-static-gzip/-/express-static-gzip-1.1.2.tgz#8bb224fbd9a808c13649a7ee94696ac1a508f9bb"
   dependencies:
     serve-static "^1.12.3"
 
