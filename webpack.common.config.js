@@ -10,7 +10,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ACTIVE_COLOR = '#1890ff';
 
 module.exports = {
-  entry: { app: path.resolve(__dirname, 'src/index.js') },
+  entry: { app: path.resolve(__dirname, 'src/client/index.js') },
 
   output: {
     publicPath: '/',
@@ -71,7 +71,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].[hash].css' }),
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve(__dirname, 'src/client/index.html'),
       filename: 'index.html',
       inject: 'body',
     }),
@@ -90,5 +90,5 @@ module.exports = {
     }),
   ],
 
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: { extensions: ['.js'] },
 };

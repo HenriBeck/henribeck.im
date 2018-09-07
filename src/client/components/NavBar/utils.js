@@ -1,8 +1,10 @@
 // @flow strict-local
 
-const offsetTop = window.innerHeight * 0.15;
-const offsetBottom = window.innerHeight * 0.75;
-const maxViewport = window.innerHeight * 0.6;
+const def = variable => typeof variable !== 'undefined';
+
+const offsetTop = typeof window !== 'undefined' ? window.innerHeight * 0.15 : 0;
+const offsetBottom = typeof window !== 'undefined' ? window.innerHeight * 0.75 : 0;
+const maxViewport = typeof window !== 'undefined' ? window.innerHeight * 0.6 : 0;
 
 function scrollToSection(name: string) {
   const section = document.querySelector(`section[data-name="${name}"]`);
