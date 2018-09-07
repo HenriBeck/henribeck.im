@@ -1,10 +1,9 @@
 // @flow strict-local
 
-const def = variable => typeof variable !== 'undefined';
-
-const offsetTop = typeof window !== 'undefined' ? window.innerHeight * 0.15 : 0;
-const offsetBottom = typeof window !== 'undefined' ? window.innerHeight * 0.75 : 0;
-const maxViewport = typeof window !== 'undefined' ? window.innerHeight * 0.6 : 0;
+// This is needed for server side rendering because window will not be defined on the server
+const offsetTop = typeof window === 'undefined' ? 0 : window.innerHeight * 0.15;
+const offsetBottom = typeof window === 'undefined' ? 0 : window.innerHeight * 0.75;
+const maxViewport = typeof window === 'undefined' ? 0 : window.innerHeight * 0.6;
 
 function scrollToSection(name: string) {
   const section = document.querySelector(`section[data-name="${name}"]`);

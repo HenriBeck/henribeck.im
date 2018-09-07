@@ -32,7 +32,6 @@ function registerServiceWorker() {
 const element = document.getElementById('app');
 
 if (element) {
-  element.children;
   if (element.children.length === 0) {
     render((
       <JssProvider jss={jss}>
