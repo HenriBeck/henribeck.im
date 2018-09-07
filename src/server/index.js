@@ -19,10 +19,6 @@ app.get('*', (req: $Request, res: $Response) => {
   res.send(renderApp());
 });
 
-if (typeof port === 'undefined') {
-  throw new TypeError('Missing port. Please set the port via an ENV variable!');
-}
-
 app.listen(
   parseInt(port, 10),
   () => {
