@@ -12,6 +12,10 @@ declare module 'react-jss' {
 
   declare export class JssProvider extends React.Component<{ jss: Jss }> {}
 
+  declare export class SheetsRegistry {
+    toString(): string,
+  }
+
   declare type HOC<C> = ComponentType<ElementConfig<C>>;
 
   declare export default function styles(styles: Styles): <C: ComponentType<{}>>(comp: C) => HOC<C>;

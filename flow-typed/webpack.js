@@ -39,3 +39,11 @@ declare module 'sw-precache-webpack-plugin' {
 declare module 'webpack-bundle-analyzer' {
   declare module.exports: { BundleAnalyzerPlugin: Class<Plugin> };
 }
+
+declare module 'compression-webpack-plugin' {
+  declare module.exports: Class<Plugin>;
+}
+
+declare module 'webpack-stats-plugin' {
+  declare module.exports: { StatsWriterPlugin: Class<Plugin> };
+}
