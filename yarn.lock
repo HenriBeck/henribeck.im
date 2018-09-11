@@ -1531,12 +1531,12 @@ chardet@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
 
-check-flow@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.0.2.tgz#a2afb544be927b8b60d4e9d746dfacc64d57f7fb"
+check-flow@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/check-flow/-/check-flow-1.1.0.tgz#d4c270c6f491d73e373b876e644a0c2dbfab1ee0"
   dependencies:
     debug "3.1.0"
-    ignore "4.0.3"
+    ignore "5.0.2"
     ora "3.0.0"
     yargs "12.0.1"
 
@@ -3582,9 +3582,9 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
-ignore@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.3.tgz#e2d58c9654d75b542529fa28d80ac95b29e4f467"
+ignore@5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.0.2.tgz#42ae2651beb40c8c53b1e16b2af1c8387d492f88"
 
 ignore@^3.3.8:
   version "3.3.10"
