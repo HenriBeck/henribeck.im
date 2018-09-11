@@ -40,7 +40,7 @@
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.2",
     "babel-plugin-import": "1.8.0",
-    "check-flow": "1.0.2",
+    "check-flow": "1.1.0",
     "compression-webpack-plugin": "2.0.0",
     "css-loader": "1.0.0",
     "eslint": "5.5.0",
