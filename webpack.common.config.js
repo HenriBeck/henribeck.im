@@ -4,7 +4,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const ACTIVE_COLOR = '#1890ff';
@@ -56,15 +56,7 @@ module.exports = {
     },
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
-        uglifyOptions: {
-          warnings: false,
-          output: { comments: false },
-        },
-      }),
+      new TerserPlugin({}),
     ],
   },
 
