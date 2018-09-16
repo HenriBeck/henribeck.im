@@ -24,7 +24,7 @@ declare module 'mini-css-extract-plugin' {
   declare module.exports: Class<MiniCSSExtractPlugin>;
 }
 
-declare module 'uglifyjs-webpack-plugin' {
+declare module 'terser-webpack-plugin' {
   declare module.exports: Class<Plugin>;
 }
 
