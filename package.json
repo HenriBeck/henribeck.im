@@ -24,8 +24,8 @@
     "jss-vendor-prefixer": "8.0.1",
     "normalize.css": "8.0.0",
     "object.omit": "3.0.0",
-    "react": "16.5.1",
-    "react-dom": "16.5.1",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
     "react-event-listener": "0.6.3",
     "react-ga": "2.5.3",
     "react-jss": "8.6.1"
